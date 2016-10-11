@@ -4,7 +4,7 @@ use Mix.Config
 # you can enable the server option below.
 config :looseleaf, Looseleaf.Endpoint,
   http: [port: 4001],
-  server: false
+  server: true
 
 # Print only warnings and errors during test
 config :logger, level: :warn
@@ -15,3 +15,8 @@ config :looseleaf, Looseleaf.Repo,
   database: "looseleaf_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :wallaby,
+  phantomjs: "./node_modules/phantomjs/bin/phantomjs",
+  screenshot_dir: "./screenshots",
+  screenshot_on_failure: true
