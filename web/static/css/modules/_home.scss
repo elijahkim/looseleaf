@@ -1,0 +1,36 @@
+.home__main-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(to bottom right, $magenta, $blue);
+}
+
+.home__inner-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  min-width: 20em;
+
+  text-align: center;
+}
+
+.home__header-text {
+  @extend %header-typeface;
+
+  color: white;
+  font-size: 2.8em;
+  letter-spacing: .5em;
+}
+
+.home__copy-text {
+  @extend %primary-typeface;
+
+  color: white;
+  padding: $base-spacing;
+  font-size: 1.2em;
+  letter-spacing: .2em;
+}
