@@ -9,18 +9,31 @@ defmodule Looseleaf.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :browser_session do
+    plug Guardian.Plug.VerifySession
+    plug Guardian.Plug.LoadResource
+  end
+
+  pipeline :browser_authenticated do
+    plug Guardian.Plug.EnsureAuthenticated,
+      handler: Looseleaf.AuthorizationController
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
 
+  # Unauthenticated Routes
   scope "/", Looseleaf do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Looseleaf do
-  #   pipe_through :api
-  # end
+  # Authenticated Routes
+  scope "/", Looseleaf do
+    pipe_through [:browser, :browser_session, :browser_authenticated]
+
+    get "/profile", PageController, :index
+  end
 end
