@@ -3,9 +3,8 @@ use Mix.Config
 config :looseleaf, Looseleaf.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [
-    scheme: "https",
     host: "loose-leaf.io",
-    port: 443
+    port: 80
   ],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
