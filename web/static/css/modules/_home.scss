@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 
-  background-image: linear-gradient(to bottom right, $magenta, $blue);
+  background-image: $gradient;
 }
 
 .home__inner-container {
@@ -33,4 +33,22 @@
   padding: $base-spacing;
   font-size: 1.2em;
   letter-spacing: .2em;
+}
+
+.home__buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__button {
+  @extend %header-typeface;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  padding: $small-spacing $base-spacing;
+  margin: 0 $base-spacing;
+  border: 2px solid white;
+  border-radius: 20px;
 }

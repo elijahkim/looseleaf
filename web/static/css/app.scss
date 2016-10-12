@@ -1,5 +1,12 @@
 @import "normalize/import-now";
 @import "base/base";
-@import "variables/variables";
+
+@import "variables/colors";
+@import "variables/spacing";
+@import "variables/typography";
+
+@import "patterns";
 
 @import "modules/home";
+@import "modules/layout";
+@import "modules/sign-in";

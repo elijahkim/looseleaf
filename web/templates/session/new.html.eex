@@ -1,9 +1,11 @@
-<%= form_for @conn, session_path(@conn, :create), [as: :user], fn f -> %>
-  <%= label f, :email, "Email" %>
-  <%= email_input f, :email %>
+<div class=sign-in__main-container>
+  <%= form_for @conn, session_path(@conn, :create), [as: :user], fn f -> %>
+    <%= label f, :email, "Email" %>
+    <%= email_input f, :email %>
 
-  <%= label f, :password, "Password" %>
-  <%= password_input f, :password %>
+    <%= label f, :password, "Password" %>
+    <%= password_input f, :password %>
 
-  <%= submit "Sign in" %>
-<% end %>
+    <%= submit "Sign in" %>
+  <% end %>
+</div>
