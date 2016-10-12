@@ -16,7 +16,7 @@ defmodule Looseleaf.UserController do
         conn
         |> Guardian.Plug.sign_in(user)
         |> put_flash(:info, "Your account was created")
-        |> redirect(to: "/profile")
+        |> redirect(to: "/entries/new")
       {:error, changeset} ->
         conn
         |> put_flash(:info, "Unable to create account")
