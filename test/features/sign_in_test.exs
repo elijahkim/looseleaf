@@ -5,9 +5,9 @@ defmodule Looseleaf.SignInTest do
     text =
       session
       |> visit("/profile")
-      |> find(".alert-danger")
+      |> find(".home__main-container")
       |> text
 
-    assert text == "Please Sign in"
+    assert String.contains?(text, "Loose Leaf")
   end
 end
