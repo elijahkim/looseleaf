@@ -12,7 +12,7 @@ defmodule Looseleaf.SessionController do
         conn
         |> Guardian.Plug.sign_in(user)
         |> put_flash(:info, "Signed in successfully")
-        |> redirect(to: "/profile")
+        |> redirect(to: "/entries/new")
       {:error, :wrong_combination} ->
         conn
         |> put_flash(:error, "Wrong username or password")

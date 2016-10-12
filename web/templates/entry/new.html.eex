@@ -1,0 +1,13 @@
+<h1>New Entry</h1>
+
+<%= form_for @changeset, entry_path(@conn, :create), fn f -> %>
+  <%= if f.errors != [] do %>
+    <p>Oops, something went wrong! Please check the errors below:</p>
+  <% end %>
+
+  <%= label f, :text, "What's up?" %>
+  <%= textarea f, :text %>
+  <%= error_tag f, :text %>
+
+  <%= submit "Submit" %>
+<% end %>
