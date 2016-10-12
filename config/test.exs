@@ -16,6 +16,8 @@ config :looseleaf, Looseleaf.Repo,
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
+config :looseleaf, watson_client: Looseleaf.Watson.InMemory
+
 config :wallaby,
   phantomjs: "./node_modules/phantomjs/bin/phantomjs",
   screenshot_dir: "./screenshots",

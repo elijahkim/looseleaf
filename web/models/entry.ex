@@ -3,6 +3,7 @@ defmodule Looseleaf.Entry do
 
   schema "entries" do
     field :text, :string
+    field :sentiment_analysis, {:array, :map}
     belongs_to :user, Looseleaf.User
 
     timestamps()
