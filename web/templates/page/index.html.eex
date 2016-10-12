@@ -5,5 +5,7 @@
       The journaling app that promotes self reflection by identifying
       contextual insights and mood trends from self-clearing entries
     </p>
+
+    <%= link("Sign up", to: "/users/new", class: "home__sign-in") %>
   </div>
 </div>

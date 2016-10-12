@@ -20,3 +20,6 @@ config :wallaby,
   phantomjs: "./node_modules/phantomjs/bin/phantomjs",
   screenshot_dir: "./screenshots",
   screenshot_on_failure: true
+
+config :comeonin, :bcrypt_log_rounds, 4
+config :comeonin, :pbkdf2_rounds, 1
