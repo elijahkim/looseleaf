@@ -3,13 +3,12 @@ use Mix.Config
 config :looseleaf, Looseleaf.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [
-    host: "loose-leaf.io",
-    port: 80
+    scheme: "https",
+    host: "looseleaf-production.herokuapp.com",
+    port: 443
   ],
   cache_static_manifest: "priv/static/manifest.json",
-  secret_key_base: System.get_env("SECRET_KEY_BASE"),
-  url: [scheme: "https", port: 443],
-  force_ssl: [rewrite_on: [:x_forwarded_proto]]
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 config :looseleaf, Looseleaf.Repo,
   adapter: Ecto.Adapters.Postgres,
