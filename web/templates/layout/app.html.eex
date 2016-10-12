@@ -7,16 +7,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Looseleaf!</title>
+    <title>Looseleaf</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
-    <div class="container">
+    <div class="layout__container">
+      <div class="layout__nav-container">
+        <div class="layout__nav-left">
+          <%= link("Loose Leaf", to: "/", class: "layout__nav-home-button") %>
+        </div>
+        <div class="layout__nav-right">
+          <div class="layout__nav-right-container">
+            <%= link "LOGOUT", to: session_path(@conn, :delete, :delete),
+            method: :delete, class: "layout__nav-button" %>
+          </div>
+        </div>
+      </div>
+
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-      <%= link "Logout", to: session_path(@conn, :delete, :delete), method: :delete %>
 
       <%= render @view_module, @view_template, assigns %>
 
