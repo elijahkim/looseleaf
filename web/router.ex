@@ -28,13 +28,16 @@ defmodule Looseleaf.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
     resources "/users", UserController, only: [:new, :create]
+    resources "/sessions", SessionController, only: [:new, :create]
   end
 
   # Authenticated Routes
   scope "/", Looseleaf do
     pipe_through [:browser, :browser_session, :browser_authenticated]
 
-    get "/profile", PageController, :index
+    get "/profile", ProfileController, :index
+    resources "/sessions", SessionController, only: [:delete]
   end
 end
