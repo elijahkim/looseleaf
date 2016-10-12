@@ -1,5 +1,6 @@
 defmodule Looseleaf.SignInTest do
   use Looseleaf.AcceptanceCase
+  import Looseleaf.Factory
 
   test "A guest is redirected to the sign in page", %{session: session} do
     text =
@@ -22,6 +23,21 @@ defmodule Looseleaf.SignInTest do
       |> click_on("Signup")
       |> get_current_path
 
-    assert path == "/"
+    assert path == "/profile"
+  end
+
+  test "A guest can sign in", %{session: session} do
+    user = insert(:user)
+
+    path =
+      session
+      |> visit("/")
+      |> click_link("Sign in")
+      |> fill_in("Email", with: user.email)
+      |> fill_in("Password", with: "supersecret")
+      |> click_on("Sign in")
+      |> get_current_path
+
+    assert path == "/profile"
   end
 end

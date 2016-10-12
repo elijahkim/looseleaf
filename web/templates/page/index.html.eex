@@ -7,5 +7,6 @@
     </p>
 
     <%= link("Sign up", to: "/users/new", class: "home__sign-in") %>
+    <%= link("Sign in", to: "/sessions/new", class: "home__sign-in") %>
   </div>
 </div>

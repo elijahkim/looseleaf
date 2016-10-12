@@ -12,10 +12,11 @@ defmodule Looseleaf.UserController do
     changeset = User.changeset(%User{}, user_params)
 
     case Registration.create(changeset, Repo) do
-      {:ok, changeset} ->
+      {:ok, user} ->
         conn
+        |> Guardian.Plug.sign_in(user)
         |> put_flash(:info, "Your account was created")
-        |> redirect(to: "/")
+        |> redirect(to: "/profile")
       {:error, changeset} ->
         conn
         |> put_flash(:info, "Unable to create account")
