@@ -11,6 +11,8 @@ secret_key_base = "LpyXu+9MG2EOJyazOWNKZf22Zq43gj6PCMDk7nWJAeG9yXkM8UOkEeiCFbmyn
 config :looseleaf,
   ecto_repos: [Looseleaf.Repo]
 
+config :looseleaf, watson_client: Looseleaf.Watson.Http
+
 # Configures the endpoint
 config :looseleaf, Looseleaf.Endpoint,
   url: [host: "localhost"],
