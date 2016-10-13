@@ -1,7 +1,16 @@
 import Chart from "chart.js";
 
-function buildChartForElement(elem) {
-  new Chart(elem, {
+function buildChartForElement(canvas, parent) {
+  window.addEventListener('resize', resizeCanvas, false);
+
+  function resizeCanvas() {
+    canvas.width = parent.offsetWidth;
+    canvas.height = parent.offsetHeight * .9;
+  }
+
+  resizeCanvas();
+
+  new Chart(canvas, {
     type: 'bar',
     data: {
       labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],

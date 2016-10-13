@@ -17,8 +17,11 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .analysis__chart-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
 }
