@@ -25,7 +25,7 @@ defmodule Looseleaf.Router do
 
   # Unauthenticated Routes
   scope "/", Looseleaf do
-    pipe_through :browser
+    pipe_through [:browser, :browser_session]
 
     get "/", PageController, :index
 
