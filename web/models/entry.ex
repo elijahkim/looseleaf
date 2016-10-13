@@ -17,4 +17,9 @@ defmodule Looseleaf.Entry do
     |> cast(params, [:text, :user_id])
     |> validate_required([:text, :user_id])
   end
+
+  def query_by_user(%{id: user_id}, query \\ Looseleaf.Entry) do
+    from e in query,
+      where: e.user_id == ^user_id
+  end
 end

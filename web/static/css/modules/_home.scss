@@ -12,3 +12,16 @@
   color: white;
   margin: 0 $base-spacing;
 }
+
+.analysis__main-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.analysis__chart-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}

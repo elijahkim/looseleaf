@@ -40,5 +40,6 @@ defmodule Looseleaf.Router do
     get "/profile", ProfileController, :index
     resources "/sessions", SessionController, only: [:delete]
     resources "/entries", EntryController, only: [:new, :create]
+    resources "/anaysis", AnalysisController, only: [:index]
   end
 end
