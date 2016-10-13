@@ -1,0 +1,55 @@
+.new-entry__main-container {
+  display: flex;
+  flex: 1;
+
+  padding: $base-spacing * 2;
+}
+
+.new-entry__form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.new-entry__label-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 4em;
+  width: 100%;
+  text-align: center;
+}
+
+.new-entry__label {
+  @extend %primary-typeface;
+
+  color: white;
+  font-size: 1.2em;
+}
+
+.new-entry__textarea {
+  @extend %base-input;
+  display: flex;
+  flex: 1;
+
+  padding: $base-spacing;
+  font-size: 1.2em;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  resize: none;
+
+  &:active, &:focus {
+    border: none;
+  }
+}
+
+.new-entry__submit-button {
+  @extend %base-button;
+
+  font-size: 1.2em;
+  margin: $base-spacing;
+  width: 7em;
+  align-self: flex-end;
+}

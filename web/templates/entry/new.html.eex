@@ -1,13 +1,15 @@
-<h1>New Entry</h1>
+<div class="new-entry__main-container">
+  <%= form_for @changeset, entry_path(@conn, :create), [class:
+    "new-entry__form"], fn f -> %>
 
-<%= form_for @changeset, entry_path(@conn, :create), fn f -> %>
-  <%= if f.errors != [] do %>
-    <p>Oops, something went wrong! Please check the errors below:</p>
+    <div class="new-entry__label-container">
+      <%= label f, :text, "What's up?", class: "new-entry__label" %>
+    </div>
+
+    <%= textarea f, :text, class: "new-entry__textarea",
+    placeholder: "start typing your thoughts...", autofocus: true %>
+    <%= error_tag f, :text %>
+
+    <%= submit "Finish", class: "new-entry__submit-button" %>
   <% end %>
-
-  <%= label f, :text, "What's up?" %>
-  <%= textarea f, :text %>
-  <%= error_tag f, :text %>
-
-  <%= submit "Submit" %>
-<% end %>
+</div>
