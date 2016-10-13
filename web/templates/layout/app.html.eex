@@ -19,6 +19,8 @@
         </div>
         <div class="layout__nav-right">
           <div class="layout__nav-right-container">
+            <%= link "New Entry", to: entry_path(@conn, :new),
+            class: "layout__nav-button" %>
             <%= link "Analysis", to: analysis_path(@conn, :index),
             class: "layout__nav-button" %>
             <%= link "LOGOUT", to: session_path(@conn, :delete, :delete),
