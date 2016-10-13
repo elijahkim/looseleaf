@@ -1,14 +1,4 @@
-<div class=home__main-container>
-  <div class=home__inner-container>
-    <h1 class=home__header-text>Loose Leaf</h1>
-    <p class=home__copy-text>
-      The journaling app that promotes self reflection by identifying
-      contextual insights and mood trends from self-clearing entries
-    </p>
-
-    <div class=home__buttons-container>
-      <%= link("Sign in", to: "/sessions/new", class: "home__button") %>
-      <%= link("Sign up", to: "/users/new", class: "home__button") %>
-    </div>
-  </div>
+<div class=home__buttons-container>
+  <%= link("Log In", to: "/sessions/new", class: "home__button") %>
+  <%= link("Sign Up", to: "/users/new", class: "home__button") %>
 </div>
