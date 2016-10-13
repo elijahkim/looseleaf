@@ -6,6 +6,6 @@
     <%= label f, :password, "Password" %>
     <%= password_input f, :password %>
 
-    <%= submit "Sign in" %>
+    <%= submit "Log In" %>
   <% end %>
 </div>

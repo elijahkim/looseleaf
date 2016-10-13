@@ -1,1 +1,46 @@
 $gradient: linear-gradient(to bottom right, $magenta, $blue);
+
+%base-button {
+  @extend %primary-typeface;
+
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  padding: $small-spacing * .5 $small-spacing;
+  border: 2px solid white;
+  border-radius: 15px;
+  transition: background-color .3s ease-in-out;
+
+  &:hover, &:active {
+    background-color: $light-blue;
+  }
+}
+
+%base-input {
+  @extend %primary-typeface;
+
+  &::-webkit-input-placeholder {
+    color: $opacity-white50;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $opacity-white50;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $opacity-white50;
+  }
+
+  &:-ms-input-placeholder {
+    color: $opacity-white50;
+  }
+
+  color: white;
+  font-size: 1.3em;
+  text-decoration: none;
+  border: 0;
+  border-bottom: 2px solid $opacity-white50;
+  padding: $small-spacing;
+  margin: $small-spacing;
+  background-color: transparent;
+}

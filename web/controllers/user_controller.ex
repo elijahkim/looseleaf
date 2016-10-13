@@ -5,7 +5,8 @@ defmodule Looseleaf.UserController do
   def new(conn, _params) do
     changeset = User.changeset(%User{})
 
-    render conn, "new.html", changeset: changeset
+    render conn, "new.html", changeset: changeset,
+      layout: {Looseleaf.LayoutView, "home.html"}
   end
 
   def create(conn, %{"user" => user_params}) do

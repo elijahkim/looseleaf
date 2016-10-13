@@ -3,7 +3,7 @@ defmodule Looseleaf.UserControllerTest do
 
   test "GET /users/new", %{conn: conn} do
     conn = get conn, "/users/new"
-    assert html_response(conn, 200) =~ "Sign up"
+    assert html_response(conn, 200) =~ "Sign Up"
   end
 
   describe "POST /users" do

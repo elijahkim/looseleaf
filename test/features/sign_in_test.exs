@@ -6,7 +6,7 @@ defmodule Looseleaf.SignInTest do
     text =
       session
       |> visit("/profile")
-      |> find(".home__main-container")
+      |> find(".home-layout__main-container")
       |> text
 
     assert String.contains?(text, "Loose Leaf")
@@ -16,11 +16,11 @@ defmodule Looseleaf.SignInTest do
     path =
       session
       |> visit("/")
-      |> click_link("Sign up")
+      |> click_link("Sign Up")
       |> fill_in("Email", with: "user@example.com")
       |> fill_in("user_password", with: "supersecret")
       |> fill_in("user_password_confirmation", with: "supersecret")
-      |> click_on("Signup")
+      |> click_on("Sign Up")
       |> get_current_path
 
     assert path == "/entries/new"
@@ -32,10 +32,10 @@ defmodule Looseleaf.SignInTest do
     path =
       session
       |> visit("/")
-      |> click_link("Sign in")
+      |> click_link("Log In")
       |> fill_in("Email", with: user.email)
       |> fill_in("Password", with: "supersecret")
-      |> click_on("Sign in")
+      |> click_on("Log In")
       |> get_current_path
 
     assert path == "/entries/new"

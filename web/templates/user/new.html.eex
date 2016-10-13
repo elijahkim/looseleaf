@@ -1,21 +1,18 @@
-<h1>Sign up</h1>
+<div class=sign-up__main-container>
+  <%= form_for @changeset, user_path(@conn, :create), [class: "sign-up__form"], fn f -> %>
+    <%= if f.errors != [] do %>
+      <p>Oops, something went wrong! Please check the errors below:</p>
+    <% end %>
 
-<%= form_for @changeset, user_path(@conn, :create), fn f -> %>
-  <%= if f.errors != [] do %>
-    <p>Oops, something went wrong! Please check the errors below:</p>
+    <%= email_input f, :email, placeholder: "Email" %>
+    <%= error_tag f, :email %>
+
+    <%= password_input f, :password, placeholder: "Password" %>
+    <%= error_tag f, :password %>
+
+    <%= password_input f, :password_confirmation, placeholder: "Password Confirmation"%>
+    <%= error_tag f, :password_confirmation %>
+
+    <%= submit "Sign Up", class: "sign-up__submit-button" %>
   <% end %>
-
-  <%= label f, :email, "Email" %>
-  <%= email_input f, :email %>
-  <%= error_tag f, :email %>
-
-  <%= label f, :password, "Password" %>
-  <%= password_input f, :password %>
-  <%= error_tag f, :password %>
-
-  <%= label f, :password_confirmation, "Password Confirmation" %>
-  <%= password_input f, :password_confirmation %>
-  <%= error_tag f, :password_confirmation %>
-
-  <%= submit "Signup" %>
-<% end %>
+</div>
