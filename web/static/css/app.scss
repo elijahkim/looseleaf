@@ -4,8 +4,10 @@
 @import "variables/colors";
 @import "variables/spacing";
 @import "variables/typography";
+@import "variables/transitions";
 
 @import "patterns";
+@import "patterns/_user-control";
 
 @import "layouts/home_layout";
 

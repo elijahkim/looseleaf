@@ -3,7 +3,8 @@ defmodule Looseleaf.SessionController do
   alias Looseleaf.{PasswordManager, Repo}
 
   def new(conn, _params) do
-    render conn, "new.html"
+    render conn, "new.html",
+      layout: {Looseleaf.LayoutView, "home.html"}
   end
 
   def create(conn, %{"user" => user}) do
