@@ -9,7 +9,7 @@ $gradient: linear-gradient(to bottom right, $magenta, $blue);
   padding: $small-spacing * .5 $small-spacing;
   border: 2px solid white;
   border-radius: 15px;
-  transition: background-color .3s ease-in-out;
+  transition: background-color $base-transition;
 
   &:hover, &:active {
     background-color: $light-blue;
@@ -43,4 +43,11 @@ $gradient: linear-gradient(to bottom right, $magenta, $blue);
   padding: $small-spacing;
   margin: $small-spacing;
   background-color: transparent;
+
+  transition: border-bottom $base-transition;
+
+  &:active, &:focus {
+    outline: none;
+    border-bottom: 2px solid white;
+  }
 }

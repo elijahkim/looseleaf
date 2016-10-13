@@ -1,11 +1,13 @@
 <div class=sign-in__main-container>
-  <%= form_for @conn, session_path(@conn, :create), [as: :user], fn f -> %>
-    <%= label f, :email, "Email" %>
-    <%= email_input f, :email %>
+  <%= form_for @conn, session_path(@conn, :create), [as: :user, class:
+    "sign-in__form"], fn f -> %>
 
-    <%= label f, :password, "Password" %>
-    <%= password_input f, :password %>
+    <%= email_input f, :email, placeholder: "Email" %>
+    <%= error_tag f, :email %>
 
-    <%= submit "Log In" %>
+    <%= password_input f, :password, placeholder: "Password" %>
+    <%= error_tag f, :password %>
+
+    <%= submit "Log In", class: "sign-in__submit-button" %>
   <% end %>
 </div>

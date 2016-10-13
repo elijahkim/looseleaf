@@ -1,4 +1,11 @@
 .sign-in__main-container {
-  display: flex;
-  flex: 1;
+  @extend %user-control__main-container;
+}
+
+.sign-in__form {
+  @extend %user-control__form
+}
+
+.sign-in__submit-button {
+  @extend %user-control__button
 }

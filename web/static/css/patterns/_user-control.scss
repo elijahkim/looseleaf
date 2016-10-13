@@ -1,0 +1,27 @@
+%user-control__main-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
+  width: 50%;
+}
+
+%user-control__form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  input {
+    @extend %base-input;
+  }
+}
+
+%user-control__button {
+  @extend %base-button;
+
+  align-self: center;
+  margin-top: $base-spacing * 2;
+  width: 6em;
+  font-size: 1.5em;
+}
