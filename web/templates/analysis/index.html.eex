@@ -1,0 +1,7 @@
+<div class="analysis__main-container">
+  <div class="analysis__chart-container">
+    <canvas id="js-chart"></canvas>
+  </div>
+</div>
+
+<div class="js-entries" data-entries=<%= @entries %>> </div>

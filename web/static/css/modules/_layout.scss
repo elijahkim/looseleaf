@@ -39,6 +39,8 @@
 }
 
 .layout__nav-right-container {
+  display: flex;
+  flex-direction: row;
   padding-bottom: 21px;
   padding-right: 21px;
 }
@@ -50,4 +52,5 @@
   text-decoration: none;
   color: white;
   letter-spacing: .2em;
+  margin: 0 $small-spacing;
 }

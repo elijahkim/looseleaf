@@ -12,3 +12,13 @@
   color: white;
   margin: 0 $base-spacing;
 }
+
+.analysis__main-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.analysis__chart-container {
+}
