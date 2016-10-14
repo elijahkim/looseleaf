@@ -19,7 +19,9 @@ defmodule Looseleaf.Entry do
   end
 
   def query_by_user(%{id: user_id}, query \\ Looseleaf.Entry) do
-    from e in query,
-      where: e.user_id == ^user_id
+    from(e in query,
+      where: e.user_id == ^user_id,
+      order_by: [desc: :inserted_at])
+    |> limit(10)
   end
 end
