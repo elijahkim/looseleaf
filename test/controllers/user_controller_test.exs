@@ -27,7 +27,7 @@ defmodule Looseleaf.UserControllerTest do
         }
       }
 
-      assert html_response(conn, 200) =~ "Unable to create account"
+      assert html_response(conn, 200) =~ "Oops, something went wrong!"
     end
   end
 end

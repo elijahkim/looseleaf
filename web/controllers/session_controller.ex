@@ -3,8 +3,7 @@ defmodule Looseleaf.SessionController do
   alias Looseleaf.{PasswordManager, Repo}
 
   def new(conn, _params) do
-    render conn, "new.html",
-      layout: {Looseleaf.LayoutView, "home.html"}
+    render_new(conn)
   end
 
   def create(conn, %{"user" => user}) do
@@ -17,7 +16,7 @@ defmodule Looseleaf.SessionController do
       {:error, :wrong_combination} ->
         conn
         |> put_flash(:error, "Wrong username or password")
-        |> render("new.html")
+        |> render_new
     end
   end
 
@@ -25,5 +24,10 @@ defmodule Looseleaf.SessionController do
     Guardian.Plug.sign_out(conn)
     |> put_flash(:info, "Logged out successfully.")
     |> redirect(to: "/")
+  end
+
+  defp render_new(conn) do
+    render conn, "new.html",
+      layout: {Looseleaf.LayoutView, "home.html"}
   end
 end

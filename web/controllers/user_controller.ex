@@ -5,8 +5,7 @@ defmodule Looseleaf.UserController do
   def new(conn, _params) do
     changeset = User.changeset(%User{})
 
-    render conn, "new.html", changeset: changeset,
-      layout: {Looseleaf.LayoutView, "home.html"}
+    render_new(conn, changeset)
   end
 
   def create(conn, %{"user" => user_params}) do
@@ -21,7 +20,13 @@ defmodule Looseleaf.UserController do
       {:error, changeset} ->
         conn
         |> put_flash(:info, "Unable to create account")
-        |> render("new.html", changeset: changeset)
+        |> render_new(changeset)
     end
+  end
+
+  defp render_new(conn, changeset) do
+    conn
+    |> render("new.html", changeset: changeset,
+      layout: {Looseleaf.LayoutView, "home.html"})
   end
 end
