@@ -25,5 +25,7 @@
         <%= render @view_module, @view_template, assigns %>
       </div>
     </div>
+    <div class="home-layout__background-image">
+    </div>
   </body>
 </html>

@@ -9,6 +9,18 @@
   background-image: $gradient;
 }
 
+.home-layout__background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("/images/pencils_and_papers.svg");
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
 .home-layout__inner-container {
   display: flex;
   flex-direction: column;
