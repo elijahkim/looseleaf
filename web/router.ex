@@ -38,6 +38,7 @@ defmodule Looseleaf.Router do
     pipe_through [:browser, :browser_session, :browser_authenticated]
 
     get "/profile", ProfileController, :index
+    get "/entries/success", EntryController, :success
     resources "/sessions", SessionController, only: [:delete]
     resources "/entries", EntryController, only: [:new, :create]
     resources "/anaysis", AnalysisController, only: [:index]
