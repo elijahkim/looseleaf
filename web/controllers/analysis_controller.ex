@@ -11,7 +11,7 @@ defmodule Looseleaf.AnalysisController do
     render_analysis(conn, current_user, entries)
   end
 
-  defp render_analysis(conn, current_user, entries) when length(entries) >= 10 do
+  defp render_analysis(conn, current_user, entries) when length(entries) >= 3 do
     entries =
       entries
       |> EntryHelper.assemble_chart_data
