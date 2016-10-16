@@ -13,11 +13,16 @@ defmodule Looseleaf.EntryController do
     case EntrySaver.save_entry(entry_params, current_user, Repo) do
       {:ok, entry} ->
         conn
-        |> redirect(to: "/entries/new")
+        |> redirect(to: "/entries/success")
       {:error, changeset} ->
         conn
         |> put_flash(:error, "Failed to journal")
         |> render("new.html", changeset: changeset)
     end
+  end
+
+  def success(conn, _params, current_user, _claims) do
+    conn
+    |> render("success.html", current_user: current_user)
   end
 end

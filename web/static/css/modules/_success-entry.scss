@@ -1,0 +1,229 @@
+.success-entry__main-container {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.success-entry__copy-container {
+  display: absolute;
+  width: 100%;
+  flex-flow: column;
+  align-items: center;
+  opacity: 0;
+
+  animation: success-animation__copy 6s;
+  animation-fill-mode: forwards;
+}
+
+.success-entry__copy-inner-container {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes success-animation__copy {
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .8;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.success-entry__header, .success-entry__copy {
+  @extend %primary-typeface;
+
+  color: white;
+  margin-bottom: $small-spacing;
+}
+
+.success-entry__buttons-container {
+  display: flex;
+  flex-flow: row;
+}
+
+.success-entry__button {
+  @extend %base-button;
+  margin: $small-spacing;
+}
+
+.success-entry__paper {
+  height: 30%;
+  width: 30%;
+  margin: $base-spacing;
+
+  animation: success-animation__paper 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-animation__paper {
+  0% {
+    transform: translateX(-40%) translateY(0) rotate(-0.02turn);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+}
+
+.success-entry__star {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15%;
+
+  animation: success-animation__star 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-animation__star {
+  0% {
+    transform: translateX(-400%) translateY(160%) rotate(0.05turn);
+  }
+
+  100% {
+    transform: translateX(-200%) translateY(160%) rotate(-0.05turn);
+  }
+}
+
+.success-entry__animation {
+  position: relative;
+  width: 40%;
+  height: 40%;
+
+  align-self: center;
+}
+
+.success-entry__animation-book {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+
+  width: 40%;
+  animation: success-animation__book 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-animation__book {
+  100% {
+    opacity: 0;
+  }
+}
+
+.success-entry__animation-page1 {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(-5%) translateY(-11%);
+  width: 13%;
+
+  animation: success-animation__page1 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-animation__page1 {
+  100% {
+    transform: translateX(40%) translateY(-150%) rotate(-0.1turn);
+    opacity: 0;
+  }
+}
+
+.success-entry__animation-page2 {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(-5%) translateY(-17%);
+  width: 12%;
+
+  animation: success-animation__page2 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-animation__page2 {
+  100% {
+    transform: translateX(-5%) translateY(-150%) rotate(0.1turn);
+    opacity: 0;
+  }
+}
+
+.success-entry__animation-page3 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(5%) translateY(-12%);
+  width: 10.5%;
+
+  animation: success-animation__page3 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-animation__page3 {
+  100% {
+    transform: translateX(-5%) translateY(-150%) rotate(0.1turn);
+    opacity: 0;
+  }
+}
+
+.success-entry__animation-page4 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(5%) translateY(-12%);
+
+  width: 13%;
+  animation: success-animation__page4 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-animation__page4 {
+  100% {
+    transform: translateX(-10%) translateY(-200%) rotate(-0.1turn);
+    opacity: 0;
+  }
+}
+
+.success-entry__animation-page5 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(5%) translateY(-14%);
+  width: 13%;
+
+  animation: success-animation__page5 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-animation__page5 {
+  100% {
+    transform: translateX(-10%) translateY(-200%) rotate(-0.1turn);
+    opacity: 0;
+  }
+}
+
+.success-entry__animation-pencil {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(-100%) translateY(40%);
+  width: 13%;
+
+  animation: success-animation__pencil 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes success-animation__pencil {
+  100% {
+    transform: translateX(10%) translateY(-500%) rotate(-0.5turn);
+    opacity: 0;
+  }
+}
