@@ -1,0 +1,12 @@
+<div class="analysis__main-container">
+  <div class="analysis__copy-container">
+    <img src="<%= static_path(@conn, "/images/loose_leaf_man_sad.svg") %>"
+    class="analysis__loose-leaf-man">
+    <div class="analysis__paper-man"></div>
+    <h1 class="analysis__header">Not quite there yet...</h1>
+    <p class="analysis__copy">
+    We're excited you started writing, but we'll need some more entries from
+    you to gather any meaningful insights and trends.
+    <p>
+  </div>
+</div>

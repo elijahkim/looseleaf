@@ -1,0 +1,44 @@
+.analysis__main-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.analysis__copy-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+}
+
+.analysis__chart-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.analysis__header {
+  @extend %primary-typeface;
+
+  color: white;
+  text-align: center;
+  margin-bottom: $base-spacing;
+}
+
+.analysis__copy {
+  @extend %primary-typeface;
+
+  color: white;
+  text-align: center;
+}
+
+.analysis__loose-leaf-man {
+  height: 30%;
+  width: 30%;
+  margin-bottom: $base-spacing;
+}

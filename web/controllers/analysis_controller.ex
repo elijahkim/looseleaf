@@ -7,9 +7,20 @@ defmodule Looseleaf.AnalysisController do
     entries =
       Entry.query_by_user(current_user)
       |> Repo.all
+
+    render_analysis(conn, current_user, entries)
+  end
+
+  defp render_analysis(conn, current_user, entries) when length(entries) >= 10 do
+    entries =
+      entries
       |> EntryHelper.assemble_chart_data
       |> Poison.encode!
 
     render(conn, "index.html", current_user: current_user, entries: entries)
+  end
+
+  defp render_analysis(conn, current_user, _) do
+    render(conn, "not_yet.html", current_user: current_user)
   end
 end
