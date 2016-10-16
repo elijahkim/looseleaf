@@ -24,7 +24,7 @@ import buildChartForElement from "./chart"
 let ctx = document.getElementById("js-chart");
 
 if (ctx) {
-  let parent = document.getElementsByClassName("analysis__chart-container")[0]
+  let parent = document.getElementsByClassName("analysis__main-container")[0]
   buildChartForElement(ctx, parent)
 };
 

@@ -6,6 +6,11 @@
   align-items: center;
 }
 
+.analysis__chart-container {
+  display: flex;
+  flex: 1;
+}
+
 .analysis__copy-container {
   display: flex;
   flex: 1;
@@ -13,13 +18,6 @@
   justify-content: center;
   align-items: center;
   max-width: 50%;
-}
-
-.analysis__chart-container {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 .analysis__header {
