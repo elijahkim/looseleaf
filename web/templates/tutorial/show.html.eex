@@ -1,5 +1,4 @@
 <div class=tutorial__main-container>
-  <h1 class=tutorial__header-primary>Loose Leaf</h1>
   <div class=tutorial__image-container>
     <img src=<%= static_path(@conn, @assets.image) %>>
   </div>
