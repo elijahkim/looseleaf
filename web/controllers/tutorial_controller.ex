@@ -30,7 +30,7 @@ defmodule Looseleaf.TutorialController do
   defp get_assets(3) do
     %{
       text: "The journaling app allows you to externalize and release these
-      thoughts to prevent being weighed down by nagive thoughts or privary
+      thoughts to prevent being weighed down by negative thoughts or privacy
       concerns.",
       image: "/images/tutorial_icon3.svg",
       header: "Why will entries disappear?"
