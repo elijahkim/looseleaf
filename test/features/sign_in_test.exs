@@ -23,7 +23,7 @@ defmodule Looseleaf.SignInTest do
       |> click_on("Sign Up")
       |> get_current_path
 
-    assert path == "/entries/new"
+    assert path == "/tutorial/1"
   end
 
   test "A guest can sign in", %{session: session} do

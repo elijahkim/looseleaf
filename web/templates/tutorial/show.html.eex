@@ -1,0 +1,30 @@
+<div class=tutorial__main-container>
+  <h1 class=tutorial__header-primary>Loose Leaf</h1>
+  <div class=tutorial__image-container>
+    <img src=<%= static_path(@conn, @assets.image) %>>
+  </div>
+  <h2 class=tutorial__header-secondary><%= @assets.header %></h2>
+  <p class=tutorial__copy><%= @assets.text %></p>
+
+  <%= unless @id - 1 == 0 do %>
+    <a href=<%= tutorial_path(@conn, :show, @id - 1)%> class=tutorial__back-button-container>
+      <img src=<%= static_path(@conn, "/images/next_arrow.svg") %>
+      class=tutorial__back-button >
+    </a>
+  <% end %>
+
+  <a href=<%= tutorial_path(@conn, :show, @id + 1)%> class=tutorial__forward-button-container>
+    <img src=<%= static_path(@conn, "/images/next_arrow.svg") %>
+    class=tutorial__forward-button >
+  </a>
+
+  <div class=tutorial__chicklets-container>
+    <span class="tutorial__chicklet <%= chicklet_class(1, @id) %>"></span>
+    <span class="tutorial__chicklet <%= chicklet_class(2, @id) %>"></span>
+    <span class="tutorial__chicklet <%= chicklet_class(3, @id) %>"></span>
+    <span class="tutorial__chicklet <%= chicklet_class(4, @id) %>"></span>
+  </div>
+
+  <%= link("Skip Tutorial", to: entry_path(@conn, :new),
+  class: "tutorial__skip-button") %>
+</div>
