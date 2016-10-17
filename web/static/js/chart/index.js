@@ -44,6 +44,10 @@ function buildChartForElement(canvas, parent) {
   })
 
   StackBlur.canvasRGBA(canvas, 0, 0, canvasWidth, canvasHeight, 100)
+
+  canvas.onclick = (event) => {
+    let entry = Math.floor(event.y / yIncrement);
+  }
 }
 
 function createShape(context, params) {
