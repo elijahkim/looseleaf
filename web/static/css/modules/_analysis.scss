@@ -50,13 +50,32 @@
   max-width: 30em;
   background-color: white;
   text-align: center;
+  padding: $base-spacing;
 
   transform: translateX(-50%) translateY(-50%);
 }
 
 .analysis__modal-datapoints-container {
+  @extend %primary-typeface;
+
   display: flex;
   flex: 1;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.analysis__modal-header {
+  @extend %primary-typeface;
+}
+
+.analysis__modal-percents {
+  font-size: 1.2em;
+}
+
+.analysis__modal-close-button {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-50%) translateY(50%);
 }
