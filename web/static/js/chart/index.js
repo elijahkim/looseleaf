@@ -2,6 +2,7 @@ import Chart from "chart.js";
 import StackBlur from "stackblur-canvas";
 import each from "lodash/each"
 import reverse from "lodash/reverse"
+import renderModal from "./modal";
 
 let emotionColors = {
   "anger": "rgba(255, 68, 90, 0.8)", //red
@@ -17,10 +18,9 @@ var prevPoints = {};
 var yIncrement;
 var canvasWidth;
 var canvasHeight;
+var displayInfoModal = false;
 
-function buildChartForElement(canvas, parent) {
-  let entriesElem = document.getElementsByClassName("js-entries")[0];
-  let entries = JSON.parse(entriesElem.dataset.entries);
+function buildChartForElement(canvas, entries, parent) {
   let numPoints = entries["anger"].length
 
   //set default prevPoints to 0

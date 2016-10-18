@@ -1,5 +1,6 @@
 <div class="analysis__main-container">
-  <canvas id="js-chart"></canvas>
+  <div id="js-react-chart"></div>
+  <div class="js-analysis-modal"></div>
 </div>
 
 <div class="js-entries" data-entries=<%= @entries %>> </div>
