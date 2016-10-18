@@ -1,4 +1,5 @@
 .analysis__main-container {
+  position: relative;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -39,4 +40,23 @@
   height: 30%;
   width: 30%;
   margin-bottom: $base-spacing;
+}
+
+.analysis__modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  max-width: 30em;
+  background-color: white;
+  text-align: center;
+
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.analysis__modal-datapoints-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
 }

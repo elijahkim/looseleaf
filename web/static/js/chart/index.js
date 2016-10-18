@@ -2,6 +2,7 @@ import Chart from "chart.js";
 import StackBlur from "stackblur-canvas";
 import each from "lodash/each"
 import reverse from "lodash/reverse"
+import renderModal from "./modal";
 
 let emotionColors = {
   "anger": "rgba(255, 68, 90, 0.8)", //red
@@ -17,6 +18,7 @@ var prevPoints = {};
 var yIncrement;
 var canvasWidth;
 var canvasHeight;
+var displayInfoModal = false;
 
 function buildChartForElement(canvas, parent) {
   let entriesElem = document.getElementsByClassName("js-entries")[0];
@@ -44,10 +46,6 @@ function buildChartForElement(canvas, parent) {
   })
 
   StackBlur.canvasRGBA(canvas, 0, 0, canvasWidth, canvasHeight, 100)
-
-  canvas.onclick = (event) => {
-    let entry = Math.floor(event.y / yIncrement);
-  }
 }
 
 function createShape(context, params) {

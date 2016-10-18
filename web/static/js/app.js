@@ -13,6 +13,8 @@
 // to also remove its path from "config.paths.watched".
 import "phoenix_html"
 import buildChartForElement from "./chart"
+import Chart from "./components/chart/chart";
+import { h, render } from 'preact';
 
 // Import local files
 //
@@ -21,10 +23,8 @@ import buildChartForElement from "./chart"
 
 // import socket from "./socket"
 
-let ctx = document.getElementById("js-chart");
+let elem = document.getElementById("js-react-chart");
 
-if (ctx) {
-  let parent = document.getElementsByClassName("analysis__main-container")[0]
-  buildChartForElement(ctx, parent)
-};
-
+if (elem) {
+  render(<Chart />, elem)
+}
