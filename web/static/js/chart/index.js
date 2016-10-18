@@ -20,9 +20,7 @@ var canvasWidth;
 var canvasHeight;
 var displayInfoModal = false;
 
-function buildChartForElement(canvas, parent) {
-  let entriesElem = document.getElementsByClassName("js-entries")[0];
-  let entries = JSON.parse(entriesElem.dataset.entries);
+function buildChartForElement(canvas, entries, parent) {
   let numPoints = entries["anger"].length
 
   //set default prevPoints to 0
