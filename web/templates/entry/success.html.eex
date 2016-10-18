@@ -1,5 +1,5 @@
 <div class="success-entry__main-container">
-  <div class="success-entry__animation">
+  <div class="success-entry__animation1">
     <img src=<%= static_path(@conn, "/images/book_blank.svg") %>
     class="success-entry__animation-book">
     <img src=<%= static_path(@conn, "/images/page1.svg") %>
@@ -14,26 +14,25 @@
     class="success-entry__animation-page3">
     <img src=<%= static_path(@conn, "/images/pencil.svg") %>
     class="success-entry__animation-pencil" >
+    <img src=<%= static_path(@conn, "/images/happy_loose_leaf_man.svg") %>
+    class="success-entry__paper">
+    <img src=<%= static_path(@conn, "/images/full_star.svg") %>
+    class="success-entry__star">
+  </div>
+  <div class="success-entry__animation2">
     <div class="success-entry__copy-container">
-      <div class="success-entry__copy-inner-container">
-        <img src=<%= static_path(@conn, "/images/happy_loose_leaf_man.svg") %>
-           class="success-entry__paper">
-          <h1 class="success-entry__header">
-            Thanks for writing!
-          </h1>
-          <p class="success-entry__copy">
-          We've received your entry and on our way to extracting trends from your
-          entry.
-          </p>
-
-          <div class="success-entry__buttons-container">
-            <%= link("New Entry", to: entry_path(@conn, :new),
-            class: "success-entry__button") %>
-            <%= link("Analysis", to: analysis_path(@conn, :index),
-            class: "success-entry__button") %>
-          </div>
-        <img src=<%= static_path(@conn, "/images/full_star.svg") %>
-           class="success-entry__star">
+      <h1 class="success-entry__header">
+        Thanks for writing!
+      </h1>
+      <p class="success-entry__copy">
+      We've received your entry and on our way to extracting trends from your
+      entry.
+      </p>
+      <div class="success-entry__buttons-container">
+        <%= link("New Entry", to: entry_path(@conn, :new),
+        class: "success-entry__button") %>
+        <%= link("Analysis", to: analysis_path(@conn, :index),
+        class: "success-entry__button") %>
       </div>
     </div>
   </div>
