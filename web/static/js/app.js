@@ -14,6 +14,7 @@
 import "phoenix_html"
 import buildChartForElement from "./chart"
 import Chart from "./components/chart/chart";
+import Notes from "./components/notes";
 import { h, render } from 'preact';
 
 // Import local files
@@ -23,8 +24,14 @@ import { h, render } from 'preact';
 
 // import socket from "./socket"
 
-let elem = document.getElementById("js-react-chart");
+let chartElem = document.getElementById("js-react-chart");
 
-if (elem) {
-  render(<Chart />, elem)
+if (chartElem) {
+  render(<Chart />, chartElem)
+}
+
+let notesElem = document.getElementById("js-react-notes");
+
+if (notesElem) {
+  render(<Notes />, notesElem)
 }

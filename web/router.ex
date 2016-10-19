@@ -43,5 +43,6 @@ defmodule Looseleaf.Router do
     resources "/entries", EntryController, only: [:new, :create]
     resources "/anaysis", AnalysisController, only: [:index]
     resources "/tutorial", TutorialController, only: [:show]
+    resources "/notes", NoteController, only: [:index]
   end
 end
