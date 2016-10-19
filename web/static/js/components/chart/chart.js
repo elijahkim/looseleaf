@@ -24,6 +24,8 @@ class Chart extends Component {
     let canvas = document.getElementById("js-chart");
     let { entries } = this.state;
     let entry = Math.floor(event.y / (canvas.height / (entries["anger"].length - 1)));
+    console.log(entry);
+    console.log(entries["joy"]);
 
     this.setState({ currentEntry: entry, renderModal: true });
   }
