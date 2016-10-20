@@ -19,24 +19,23 @@
 
   background-image: url("/images/pencils_and_papers.svg");
   background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+
   pointer-events: none;
 }
 
 .home-layout__inner-container {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  max-width: 60em;
-
+  width: 100%;
+  max-width: 40em;
   text-align: center;
+  margin: $base-spacing;
 }
+
 .home-layout__copy-container {
   margin-bottom: $base-spacing;
-//   position: fixed;
-//   top: 20%;
-//   left: 20%;
-//   right: 20%;
-//   margin: auto;
 }
 
 .home-layout__header-text {
@@ -52,6 +51,11 @@
 
   color: white;
   padding: $base-spacing;
-  font-size: 1.2em;
-  letter-spacing: .2em;
+  font-size: 1em;
+  letter-spacing: .05em;
+
+  @include desktop {
+    letter-spacing: .2em;
+    font-size: 1.2em;
+  }
 }
