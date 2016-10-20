@@ -2,18 +2,24 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-
-  width: 50%;
+  width: 80%;
 }
 
 %user-control__form {
   display: flex;
   flex-direction: column;
-
-  width: 100%;
+  font-size: .8em;
 
   input {
     @extend %base-input;
+  }
+
+  @include tablet {
+    font-size: .8em;
+  }
+
+  @include desktop {
+    font-size: 1em;
   }
 }
 
@@ -23,5 +29,13 @@
   align-self: center;
   margin-top: $base-spacing * 2;
   width: 6em;
-  font-size: 1.5em;
+  font-size: 1.2em;
+
+  @include tablet {
+    font-size: 1.3em;
+  }
+
+  @include desktop {
+    font-size: 1.5em;
+  }
 }

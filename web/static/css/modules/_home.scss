@@ -9,9 +9,17 @@
 .home__button {
   @extend %base-button;
 
-  font-size: 1.5em;
   color: white;
   margin: 0 $base-spacing;
+  font-size: 1em;
+
+  @include tablet {
+    font-size: 1.2em;
+  }
+
+  @include desktop {
+    font-size: 1.5em;
+  }
 }
 
 .home__extended {
@@ -24,6 +32,16 @@
 
 .home__block1 {
   display: flex;
+  flex: 1;
+  flex-flow: column;
+
+  @include tablet {
+    flex-flow: row;
+  }
+
+  @include desktop {
+    flex-flow: row;
+  }
 }
 
 .home__block1-info {
@@ -31,22 +49,56 @@
   flex: 1;
   flex-flow: column;
   justify-content: center;
-  margin: $base-spacing * 2;
+  margin: $base-spacing;
+
+  @include tablet {
+    margin: $base-spacing * 2;
+  }
+
+  @include desktop {
+    margin: $base-spacing * 2;
+  }
 }
 
 .home__block1-img {
-  height: 40%;
+  width: 60%;
+  align-self: center;
+  margin-bottom: $small-spacing;
+
+  @include tablet {
+    height: 40%;
+  }
+
+  @include desktop {
+    height: 40%;
+  }
 }
 
 .home__block1-header {
   @extend %primary-typeface;
 
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: $small-spacing;
+
+  @include tablet {
+    font-size: 1.4em;
+  }
+
+  @include desktop {
+    font-size: 1.4em;
+  }
 }
 
 .home__block1-copy {
   @extend %primary-typeface;
 
-  font-size: 1em;
+  font-size: .9em;
+
+  @include tablet {
+    font-size: 1em;
+  }
+
+  @include desktop {
+    font-size: 1em;
+  }
 }
