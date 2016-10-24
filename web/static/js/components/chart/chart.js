@@ -1,4 +1,4 @@
-import { h, render, Component } from 'preact';
+import React, { Component } from 'react';
 import buildChartForElement from "../../chart"
 import Modal from "./modal";
 

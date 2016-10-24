@@ -1,14 +1,14 @@
+<link rel="stylesheet" type="text/css"
+href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+/>
+<link rel="stylesheet" type="text/css"
+                       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+                       />
 <div class="new-entry__main-container">
   <%= form_for @changeset, entry_path(@conn, :create), [class:
     "new-entry__form"], fn f -> %>
 
-    <div class="new-entry__label-container">
-      <%= label f, :text, "What's up?", class: "new-entry__label" %>
-    </div>
-
-    <%= textarea f, :text, class: "new-entry__textarea",
-    placeholder: "start typing your thoughts...", autofocus: true %>
-    <%= error_tag f, :text %>
+    <div id="js-react-entry"></div>
 
     <%= submit "Finish", class: "new-entry__submit-button" %>
   <% end %>

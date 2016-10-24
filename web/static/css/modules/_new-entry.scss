@@ -6,16 +6,23 @@
 }
 
 .new-entry__form {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.new-entry__carousel {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.new-entry__question {
+  width: 100%;
 }
 
 .new-entry__label-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   height: 4em;
   width: 100%;
   text-align: center;
@@ -30,15 +37,17 @@
 
 .new-entry__textarea {
   @extend %base-input;
-  display: flex;
-  flex: 1;
 
-  padding: $base-spacing;
+  margin: auto;
+  box-sizing: border-box;
   font-size: 1.2em;
   background-color: transparent;
   outline: none;
   border: none;
   resize: none;
+  width: 100%;
+  height: 70vh;
+  padding: $base-spacing * 2;
 
   &:active, &:focus {
     border: none;
@@ -51,5 +60,10 @@
   font-size: 1.2em;
   margin: $base-spacing;
   width: 7em;
-  align-self: flex-end;
+}
+
+#js-react-entry {
+  display: block;
+  width: 100%;
+  height: 90%;
 }

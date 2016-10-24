@@ -14,7 +14,9 @@
 import "phoenix_html"
 import buildChartForElement from "./chart"
 import Chart from "./components/chart/chart";
-import { h, render } from 'preact';
+import Entry from "./components/entry";
+import React from "react";
+import ReactDOM from "react-dom";
 
 // Import local files
 //
@@ -26,5 +28,11 @@ import { h, render } from 'preact';
 let elem = document.getElementById("js-react-chart");
 
 if (elem) {
-  render(<Chart />, elem)
+  ReactDOM.render(<Chart />, elem)
+}
+
+let entryFormElem = document.getElementById("js-react-entry");
+
+if (entryFormElem) {
+  ReactDOM.render(<Entry />, entryFormElem)
 }
