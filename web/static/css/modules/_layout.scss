@@ -14,7 +14,7 @@
 }
 
 .nav-trigger:checked ~ .layout__container {
-  transform: translateX(20em);
+  transform: translateX($off-canvas-nav-width);
   transition: transform $base-transition;
 }
 
@@ -32,8 +32,9 @@ label[for="nav-trigger"] {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-image: url("/images/hamburger_icon.svg");
   background-size: contain;
+  background-repeat: no-repeat;
   transform: rotate(0deg);
   transition: transform $base-transition;
 
@@ -49,13 +50,45 @@ label[for="nav-trigger"] {
 .layout__off-canvas-menu-container {
   position: fixed;
   height: 100%;
-  width: 20em;
+  width: $off-canvas-nav-width;
   background-color: white;
   transform: translateX(-100%);
 
   @include desktop {
     display: none;
   }
+}
+
+.layout__off-canvas-header {
+  @extend %header-typeface;
+  width: 100%;
+  font-size: 3em;
+  padding: $small-spacing *.3;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+}
+
+.layout__off-canvas-list {
+  list-style: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.layout__off-canvas-icon {
+  height: 18px;
+  width: 18px;
+  margin-right: $base-spacing;
+  color: black;
+}
+
+.layout__off-canvas-list-item {
+  @extend %primary-typeface;
+  padding: $base-spacing;
+  width: 100%;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
 }
 
 .layout__nav-container-desktop {

@@ -26,7 +26,7 @@
           <div class="layout__nav-right-container">
             <%= link "New Entry", to: entry_path(@conn, :new),
             class: "layout__nav-button" %>
-            <%= link "Analysis", to: analysis_path(@conn, :index),
+            <%= link "Mood Map", to: analysis_path(@conn, :index),
             class: "layout__nav-button" %>
             <%= link "Logout", to: session_path(@conn, :delete, :delete),
             method: :delete, class: "layout__nav-button" %>
@@ -34,6 +34,24 @@
         </div>
       </div>
       <div class="layout__off-canvas-menu-container">
+        <h1 class="layout__off-canvas-header">Loose Leaf</h1>
+        <ul class="layout__off-canvas-list">
+          <li class="layout__off-canvas-list-item">
+            <img class="layout__off-canvas-icon"
+            src=<%= static_path(@conn, "/images/hamburger_pencil_icon.svg") %>>
+            New Entry
+          </li>
+          <li class="layout__off-canvas-list-item">
+            <img class="layout__off-canvas-icon"
+            src=<%= static_path(@conn, "/images/hamburger_face_icon.svg") %>>
+            Mood Map
+          </li>
+          <li class="layout__off-canvas-list-item">
+            <img class="layout__off-canvas-icon"
+            src=<%= static_path(@conn, "/images/hamburger_logout_icon.svg") %>>
+            Logout
+          </li>
+        </ul>
       </div>
 
       <%= render @view_module, @view_template, assigns %>
