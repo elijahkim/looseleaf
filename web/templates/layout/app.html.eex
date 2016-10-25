@@ -13,8 +13,12 @@
   </head>
 
   <body>
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
     <div class="layout__container">
       <div class="layout__nav-container">
+        <label for="nav-trigger"></label>
+      </div>
+      <div class="layout__nav-container-desktop">
         <div class="layout__nav-left">
           <%= link("Loose Leaf", to: "/", class: "layout__nav-home-button") %>
         </div>
@@ -29,9 +33,8 @@
           </div>
         </div>
       </div>
-
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <div class="layout__off-canvas-menu-container">
+      </div>
 
       <%= render @view_module, @view_template, assigns %>
 
