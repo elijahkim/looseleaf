@@ -2,7 +2,6 @@ import Chart from "chart.js";
 import StackBlur from "stackblur-canvas";
 import each from "lodash/each"
 import reverse from "lodash/reverse"
-import renderModal from "./modal";
 
 let emotionColors = {
   "anger": "rgba(255, 68, 90, 0.8)", //red
