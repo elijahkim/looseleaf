@@ -91,6 +91,15 @@ label[for="nav-trigger"] {
   box-sizing: border-box;
 }
 
+.layout__off-canvas-link {
+  color: $dark-blue;
+  text-decoration: none;
+
+  &:visited {
+    color: $dark-blue;
+  }
+}
+
 .layout__nav-container-desktop {
   display: none;
   flex-direction: row;

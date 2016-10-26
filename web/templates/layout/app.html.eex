@@ -34,26 +34,26 @@
         </div>
       </div>
       <div class="layout__off-canvas-menu-container">
-        <%= link to: "/" do %>
+        <%= link to: "/", class: "layout__off-canvas-link" do %>
           <h1 class="layout__off-canvas-header">Loose Leaf</h1>
         <% end %>
         <ul class="layout__off-canvas-list">
           <li class="layout__off-canvas-list-item">
-            <%= link to: entry_path(@conn, :new) do %>
+            <%= link to: entry_path(@conn, :new), class: "layout__off-canvas-link" do %>
               <img class="layout__off-canvas-icon"
-                   src=<%= static_path(@conn, "/images/hamburger_pencil_icon.svg") %>>
+                  src=<%= static_path(@conn, "/images/hamburger_pencil_icon.svg") %>>
               New Entry
             <% end %>
           </li>
           <li class="layout__off-canvas-list-item">
-            <%= link to: analysis_path(@conn, :index) do %>
+            <%= link to: analysis_path(@conn, :index), class: "layout__off-canvas-link" do %>
               <img class="layout__off-canvas-icon"
                    src=<%= static_path(@conn, "/images/hamburger_face_icon.svg") %>>
               Mood Map
             <% end %>
           </li>
           <li class="layout__off-canvas-list-item">
-            <%= link to: session_path(@conn, :delete, :delete) do %>
+            <%= link to: session_path(@conn, :delete, :delete), method: :delete, class: "layout__off-canvas-link" do %>
               <img class="layout__off-canvas-icon"
                    src=<%= static_path(@conn, "/images/hamburger_logout_icon.svg") %>>
               Logout
