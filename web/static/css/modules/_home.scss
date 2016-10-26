@@ -30,7 +30,18 @@
   width: 100%;
 }
 
+.home__block-header {
+  @extend %primary-typeface;
+  margin-top: $base-spacing;
+}
+
 .home__block1 {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+}
+
+.home__block1-info-container {
   display: flex;
   flex: 1;
   flex-flow: column;
@@ -61,7 +72,7 @@
 }
 
 .home__block1-img {
-  width: 60%;
+  width: 50%;
   align-self: center;
   margin-bottom: $small-spacing;
 

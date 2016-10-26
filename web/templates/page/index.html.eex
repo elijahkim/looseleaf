@@ -5,38 +5,41 @@
 
 <div class=home__extended>
   <div class=home__block1>
-    <div class=home__block1-info>
-      <img src=<%= static_path(@conn, "/images/splash_journal_icon.svg")%>
-      class=home__block1-img>
-      <h1 class=home__block1-header>
-        1. Entries That Disappear
-      </h1>
-      <p class=home__block1-copy>
+    <h1 class=home__block-header>How it works</h1>
+    <div class=home__block1-info-container>
+      <div class=home__block1-info>
+        <img src=<%= static_path(@conn, "/images/splash_journal_icon.svg")%>
+        class=home__block1-img>
+        <h1 class=home__block1-header>
+          1. Entries That Disappear
+        </h1>
+        <p class=home__block1-copy>
         Journal freehand or use guided prompts to express yourself. Entries
         disappear to encourage honest writing without judgment.
-      </p>
-    </div>
-    <div class=home__block1-info>
-      <img src=<%= static_path(@conn, "/images/splash_analysis_icon.svg")%>
-      class=home__block1-img>
-      <h1 class=home__block1-header>
-        2. Insights That Connect
-      </h1>
-      <p class=home__block1-copy>
+        </p>
+      </div>
+      <div class=home__block1-info>
+        <img src=<%= static_path(@conn, "/images/splash_analysis_icon.svg")%>
+        class=home__block1-img>
+        <h1 class=home__block1-header>
+          2. Insights That Connect
+        </h1>
+        <p class=home__block1-copy>
         Sit back as natural language processing technology uses tone analysis to
         extract patterns from your entries.
-      </p>
-    </div>
-    <div class=home__block1-info>
-      <img src=<%= static_path(@conn, "/images/splash_mirror_icon.svg")%>
-      class=home__block1-img>
-      <h1 class=home__block1-header>
-        3. A More Conscious You
-      </h1>
-      <p class=home__block1-copy>
+        </p>
+      </div>
+      <div class=home__block1-info>
+        <img src=<%= static_path(@conn, "/images/splash_mirror_icon.svg")%>
+        class=home__block1-img>
+        <h1 class=home__block1-header>
+          3. A More Conscious You
+        </h1>
+        <p class=home__block1-copy>
         View insights into the context and trends of your emotions over time.
         The more you write, the stronger the analysis.
-      </p>
+        </p>
+      </div>
     </div>
   </div>
 </div>
