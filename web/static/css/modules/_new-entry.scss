@@ -2,7 +2,9 @@
   display: flex;
   flex: 1;
 
-  padding: $base-spacing * 2;
+  @include desktop {
+    padding: $base-spacing * 2;
+  }
 }
 
 .new-entry__form {
@@ -25,7 +27,15 @@
   @extend %primary-typeface;
 
   color: white;
-  font-size: 1.2em;
+  font-size: 1.1em;
+
+  @include tablet {
+    font-size: 1.2em;
+  }
+
+  @include desktop {
+    font-size: 1.2em;
+  }
 }
 
 .new-entry__textarea {
@@ -33,8 +43,9 @@
   display: flex;
   flex: 1;
 
-  padding: $base-spacing;
-  font-size: 1.2em;
+  padding: $small-spacing;
+  margin: $small-spacing;
+  font-size: 1em;
   background-color: transparent;
   outline: none;
   border: none;
@@ -43,13 +54,26 @@
   &:active, &:focus {
     border: none;
   }
+
+  @include tablet {
+    padding: $base-spacing;
+    font-size: 1.2em;
+  }
+
+  @include desktop {
+    padding: $base-spacing;
+    font-size: 1.2em;
+  }
 }
 
 .new-entry__submit-button {
   @extend %base-button;
 
-  font-size: 1.2em;
+  font-size: 1em;
   margin: $base-spacing;
-  width: 7em;
   align-self: flex-end;
+
+  @include tablet {
+    font-size: 1.2em;
+  }
 }
