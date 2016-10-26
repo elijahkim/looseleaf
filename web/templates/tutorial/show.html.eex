@@ -2,7 +2,7 @@
   <div class=tutorial__image-container>
     <img src=<%= static_path(@conn, @assets.image) %>>
   </div>
-  <h2 class=tutorial__header-secondary><%= @assets.header %></h2>
+  <h1 class=tutorial__header-primary><%= @assets.header %></h1>
   <p class=tutorial__copy><%= @assets.text %></p>
 
   <%= unless @id - 1 == 0 do %>
@@ -24,6 +24,9 @@
     <span class="tutorial__chicklet <%= chicklet_class(4, @id) %>"></span>
   </div>
 
-  <%= link("Skip Tutorial", to: entry_path(@conn, :new),
-  class: "tutorial__skip-button") %>
+  <%= if @id <= 3 do %>
+    <%= link("Skip Tutorial", to: entry_path(@conn, :new), class: "tutorial__skip-button") %>
+  <% else %>
+    <%= link("Start Writing", to: entry_path(@conn, :new), class: "tutorial__skip-button") %>
+  <% end %>
 </div>
