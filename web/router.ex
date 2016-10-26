@@ -41,7 +41,7 @@ defmodule Looseleaf.Router do
     get "/entries/success", EntryController, :success
     resources "/sessions", SessionController, only: [:delete]
     resources "/entries", EntryController, only: [:new, :create]
-    resources "/anaysis", AnalysisController, only: [:index]
+    resources "/analysis", AnalysisController, only: [:index]
     resources "/tutorial", TutorialController, only: [:show]
   end
 end

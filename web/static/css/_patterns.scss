@@ -1,4 +1,5 @@
 $gradient: linear-gradient(to bottom right, $magenta, $blue);
+$base-border: 2px solid $opacity-white50;
 
 %base-button {
   @extend %primary-typeface;
@@ -39,7 +40,7 @@ $gradient: linear-gradient(to bottom right, $magenta, $blue);
   font-size: 1.3em;
   text-decoration: none;
   border: 0;
-  border-bottom: 2px solid $opacity-white50;
+  border-bottom: $base-border;
   padding: $small-spacing;
   margin: $small-spacing;
   background-color: transparent;

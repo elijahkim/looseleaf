@@ -4,15 +4,104 @@
   flex: 1;
   height: 100%;
   background-image: $gradient;
+  transform: translateX(0);
+  transition: transform $base-transition;
+}
+
+.nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.nav-trigger:checked ~ .layout__container {
+  transform: translateX($off-canvas-nav-width);
+  transition: transform $base-transition;
+}
+
+.nav-trigger:checked ~ .layout__container > .layout__nav-container >
+label[for="nav-trigger"] {
+  transform: rotate(90deg);
+  transition: transform $base-transition;
+}
+
+label[for="nav-trigger"] {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-image: url("/images/hamburger_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+  transition: transform $base-transition;
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .layout__nav-container {
-  display: flex;
+  position: relative;
+}
+
+.layout__off-canvas-menu-container {
+  position: fixed;
+  height: 100%;
+  width: $off-canvas-nav-width;
+  background-color: white;
+  transform: translateX(-100%);
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.layout__off-canvas-header {
+  @extend %header-typeface;
+  width: 100%;
+  font-size: 3em;
+  padding: $small-spacing *.3;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+}
+
+.layout__off-canvas-list {
+  list-style: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.layout__off-canvas-icon {
+  height: 18px;
+  width: 18px;
+  margin-right: $base-spacing;
+  color: black;
+}
+
+.layout__off-canvas-list-item {
+  @extend %primary-typeface;
+  padding: $base-spacing;
+  width: 100%;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+}
+
+.layout__nav-container-desktop {
+  display: none;
   flex-direction: row;
   justify-content: space-between;
 
   height: 5em;
   background-color: $opacity-white30;
+
+  @include desktop {
+    display: flex;
+  }
 }
 
 .layout__nav-left {
