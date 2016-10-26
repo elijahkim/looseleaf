@@ -36,6 +36,10 @@
   text-align: center;
 }
 
+.analysis__chart-container {
+  position: relative;
+}
+
 .analysis__loose-leaf-man {
   height: 30%;
   width: 30%;
@@ -78,4 +82,91 @@
   top: 0;
   right: 0;
   transform: translateX(-50%) translateY(50%);
+}
+
+#js-chart {
+  display: block;
+}
+
+.analysis__info-modal-container {
+  @extend %primary-typeface;
+
+  position: absolute;
+  box-sizing: border-box;
+  bottom: $small-spacing;
+  left: $small-spacing;
+  right: $small-spacing;
+  background-color: white;
+  transform: translateY(110%);
+  margin: 0 auto;
+  border-radius: 12px;
+  transition: transform $base-transition;
+
+  @include tablet {
+    width: 20em;
+    right: $small-spacing;
+    left: auto;
+  }
+
+  @include desktop {
+    width: 20em;
+    right: $small-spacing;
+    left: auto;
+  }
+}
+
+.analysis__info-modal-container--active {
+  transform: translateY(0%);
+  transition: transform $base-transition;
+}
+
+.analysis__info-modal-header {
+  background-color: $dark-blue;
+  font-size: 1.5em;
+  padding: $small-spacing * .5;
+  text-align: center;
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.analysis__info-modal-faces-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: $small-spacing * .5;
+}
+
+.analysis__info-modal-face-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+}
+
+.analysis__info-modal-face {
+  width: 2em;
+  margin-bottom: $small-spacing * .5;
+}
+
+.analysis__info-modal-copy-container {
+  margin: $small-spacing;
+  text-align: center;
+}
+
+.analysis__question-mark {
+  position: absolute;
+  width: 3em;
+  bottom: $small-spacing;
+  right: $small-spacing;
+  cursor: pointer;
+}
+
+.analysis__info-modal-close-button {
+  position: absolute;
+  top: $small-spacing * .5;
+  right: $small-spacing;
+  width: .6em;
+  cursor: pointer;
 }

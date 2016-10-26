@@ -1,6 +1,7 @@
-import { h, render, Component } from 'preact';
+import { h, render, Component } from "preact";
 import buildChartForElement from "../../chart"
 import Modal from "./modal";
+import InfoModal from "./infoModal";
 
 class Chart extends Component {
   constructor() {
@@ -33,23 +34,32 @@ class Chart extends Component {
   }
 
   renderModal() {
-    let { entries, currentEntry } = this.state;
-    let entry = {
-      anger: Math.floor(entries["anger"][currentEntry] * 100),
-      joy: Math.floor(entries["joy"][currentEntry] * 100),
-      fear: Math.floor(entries["fear"][currentEntry] * 100),
-      sadness: Math.floor(entries["sadness"][currentEntry] * 100),
-      disgust: Math.floor(entries["disgust"][currentEntry] * 100),
-    }
+    // OLD MODAL
+    // let { entries, currentEntry } = this.state;
+    // let entry = {
+    //   anger: Math.floor(entries["anger"][currentEntry] * 100),
+    //   joy: Math.floor(entries["joy"][currentEntry] * 100),
+    //   fear: Math.floor(entries["fear"][currentEntry] * 100),
+    //   sadness: Math.floor(entries["sadness"][currentEntry] * 100),
+    //   disgust: Math.floor(entries["disgust"][currentEntry] * 100),
+    // }
+    //
+    // return <Modal entry={entry} onClick={() => this.handleModalClose()} />
 
-    return <Modal entry={entry} onClick={() => this.handleModalClose()} />
+    return <InfoModal />
   }
 
   render() {
     return (
       <div>
-        <canvas id="js-chart" onClick={(e) => this.handleClick(e)} />
-        { this.state.renderModal && this.renderModal() }
+        <canvas id="js-chart" />
+        <a onClick={(e) => this.handleClick(e)}>
+          <img src={window.assets.questionIcon} className="analysis__question-mark"/>
+        </a>
+        <InfoModal
+          isActive={this.state.renderModal}
+          onClick={() => this.handleModalClose()}
+        />
       </div>
     )
   }

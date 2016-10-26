@@ -10,6 +10,17 @@
 
     <title>Looseleaf</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <script>
+      window.assets = {
+        sadFace: "<%= static_path(@conn, "/images/sadness_icon.svg") %>",
+        angerFace: "<%= static_path(@conn, "/images/anger_icon.svg") %>",
+        disgustFace: "<%= static_path(@conn, "/images/disgust_icon.svg") %>",
+        joyFace: "<%= static_path(@conn, "/images/joy_icon.svg") %>",
+        fearFace: "<%= static_path(@conn, "/images/fear_icon.svg") %>",
+        questionIcon: "<%= static_path(@conn, "/images/question.svg") %>",
+        xIcon: "<%= static_path(@conn, "/images/x_icon.svg") %>",
+      }
+    </script>
   </head>
 
   <body>
