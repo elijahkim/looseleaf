@@ -14,14 +14,7 @@
   <body>
     <div class=home-layout__main-container>
       <div class=home-layout__inner-container>
-        <div class=home-layout__copy-container>
-          <h1 class=home-layout__header-text>Loose Leaf</h1>
-          <p class=home-layout__copy-text>
-          The journaling app that promotes self reflection by identifying
-          contextual insights and mood trends from self-clearing entries
-          </p>
-        </div>
-
+        <h1 class=home-layout__header-text>Loose Leaf</h1>
         <%= render @view_module, @view_template, assigns %>
       </div>
     </div>

@@ -10,4 +10,9 @@
 
     <%= submit "Log In", class: "sign-in__submit-button" %>
   <% end %>
+
+  <p class="sign-in__new-account-copy">
+  Don't have an account? <%= link("Sign up here", to: user_path(@conn, :new),
+  class: "sign-in__link") %>
+  </p>
 </div>
