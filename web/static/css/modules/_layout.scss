@@ -64,7 +64,7 @@ label[for="nav-trigger"] {
   width: 100%;
   font-size: 3em;
   padding: $small-spacing *.3;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgba(0, 0, 0, .3);
   box-sizing: border-box;
 }
 
@@ -87,8 +87,17 @@ label[for="nav-trigger"] {
   @extend %primary-typeface;
   padding: $base-spacing;
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgba(0, 0, 0, .3);
   box-sizing: border-box;
+}
+
+.layout__off-canvas-link--active {
+  color: $purple;
+  text-decoration: none;
+
+  &:visited {
+    color: $purple;
+  }
 }
 
 .layout__off-canvas-link {
@@ -160,6 +169,11 @@ label[for="nav-trigger"] {
   &:active, &:hover {
     color: $light-blue;
   }
+}
+
+.layout__nav-button--active {
+  @extend .layout__nav-button;
+  text-decoration: underline;
 }
 
 @keyframes color-me-in {
