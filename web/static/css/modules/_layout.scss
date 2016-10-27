@@ -176,6 +176,22 @@ label[for="nav-trigger"] {
   text-decoration: underline;
 }
 
+.layout__footer-container {
+  background-color: $opacity-white30;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+.layout__footer-link {
+  @extend .layout__nav-button;
+  margin: $base-spacing;
+}
+
 @keyframes color-me-in {
   0% {
     color: white;
