@@ -16,6 +16,7 @@ defmodule Looseleaf.SessionController do
       {:error, :wrong_combination} ->
         conn
         |> put_flash(:error, "Wrong username or password")
+        |> assign(:errors, "Wrong email or password")
         |> render_new
     end
   end

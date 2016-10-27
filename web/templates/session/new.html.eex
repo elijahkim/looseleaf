@@ -2,6 +2,12 @@
   <%= form_for @conn, session_path(@conn, :create), [as: :user, class:
     "sign-in__form"], fn f -> %>
 
+    <%= if @conn.assigns[:errors] do %>
+      <div class="sign-in__form-errors-container">
+        <p class="sign-in__form-error"><%= @conn.assigns[:errors] %></p>
+      </div>
+    <% end %>
+
     <%= email_input f, :email, placeholder: "Email" %>
     <%= error_tag f, :email %>
 
