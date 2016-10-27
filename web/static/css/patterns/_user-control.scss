@@ -39,3 +39,14 @@
     font-size: 1.5em;
   }
 }
+
+%user-control__error-container {
+  margin-top: $small-spacing;
+}
+
+%user-control__error {
+  @extend %primary-typeface;
+
+  color: white;
+  font-size: 1.2em;
+}

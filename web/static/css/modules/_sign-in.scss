@@ -20,3 +20,11 @@
 .sign-in__link {
   color: white;
 }
+
+.sign-in__form-errors-container {
+  @extend %user-control__error-container;
+}
+
+.sign-in__form-error {
+  @extend %user-control__error;
+}

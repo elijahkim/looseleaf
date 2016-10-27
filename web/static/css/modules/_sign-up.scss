@@ -9,3 +9,18 @@
 .sign-up__submit-button {
   @extend %user-control__button
 }
+
+.sign-up__form-error-tag {
+  @extend %user-control__error;
+
+  align-self: flex-start;
+  margin-left: $base-spacing;
+}
+
+.sign-up__form-errors-container {
+  @extend %user-control__error-container;
+}
+
+.sign-up__form-error-message {
+  @extend %user-control__error;
+}
