@@ -116,7 +116,7 @@
   position: absolute;
   top: 0;
   left: 50%;
-  width: 40%;
+  width: 30%;
   margin: $base-spacing;
 
   animation: success-animation__paper 3s;
@@ -135,7 +135,7 @@
   }
 
   100% {
-    transform: translateX(-55%) translateY(-30%) rotate(0turn);
+    transform: translateX(-55%) translateY(-10%) rotate(0turn);
     opacity: 1;
   }
 }
@@ -144,7 +144,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 20%;
+  width: 15%;
   transform-origin: bottom left;
 
   animation: success-animation__star 3s;
