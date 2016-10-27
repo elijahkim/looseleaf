@@ -29,70 +29,14 @@
       <div class="layout__nav-container">
         <label for="nav-trigger"></label>
       </div>
-      <div class="layout__nav-container-desktop">
-        <div class="layout__nav-left">
-          <%= link("Loose Leaf", to: "/", class: "layout__nav-home-button") %>
-        </div>
-        <div class="layout__nav-right">
-          <div class="layout__nav-right-container">
-            <%= link "New Entry", to: entry_path(@conn, :new),
-            class: active_link_class(@conn, Looseleaf.EntryView) %>
-            <%= link "Mood Map", to: analysis_path(@conn, :index),
-            class: active_link_class(@conn, Looseleaf.AnalysisView) %>
-            <%= link "Logout", to: session_path(@conn, :delete, :delete),
-            method: :delete, class: "layout__nav-button" %>
-          </div>
-        </div>
-      </div>
-      <div class="layout__off-canvas-menu-container">
-        <%= link to: "/", class: "layout__off-canvas-link" do %>
-          <h1 class="layout__off-canvas-header">Loose Leaf</h1>
-        <% end %>
-        <ul class="layout__off-canvas-list">
-          <li class="layout__off-canvas-list-item">
-            <%= link to: entry_path(@conn, :new),
-            class: nav_active_link_class(@conn, Looseleaf.EntryView) do %>
-              <img class="layout__off-canvas-icon"
-                  src=<%= static_path(@conn, "/images/hamburger_pencil_icon.svg") %>>
-              New Entry
-            <% end %>
-          </li>
-          <li class="layout__off-canvas-list-item">
-            <%= link to: analysis_path(@conn, :index),
-            class: nav_active_link_class(@conn, Looseleaf.AnalysisView) do %>
-              <img class="layout__off-canvas-icon"
-                   src=<%= static_path(@conn, "/images/hamburger_face_icon.svg") %>>
-              Mood Map
-            <% end %>
-          </li>
-          <li class="layout__off-canvas-list-item">
-            <%= link to: "/", class: "layout__off-canvas-link" do %>
-              <img class="layout__off-canvas-icon"
-                   src=<%= static_path(@conn, "/images/hamburger_question_mark_icon.svg") %>>
-              About
-            <% end %>
-          </li>
-          <li class="layout__off-canvas-list-item">
-            <%= link to: "mailto:us@loose-leaf.io", class: "layout__off-canvas-link" do %>
-              <img class="layout__off-canvas-icon"
-                   src=<%= static_path(@conn, "/images/hamburger_feedback_icon.svg") %>>
-              Feedback
-            <% end %>
-          </li>
-          <li class="layout__off-canvas-list-item">
-            <%= link to: session_path(@conn, :delete, :delete), method: :delete, class: "layout__off-canvas-link" do %>
-              <img class="layout__off-canvas-icon"
-                   src=<%= static_path(@conn, "/images/hamburger_logout_icon.svg") %>>
-              Logout
-            <% end %>
-          </li>
-        </ul>
-      </div>
+
+      <%= render "desktop_nav_links.html", assigns %>
+      <%= render "nav_link.html", assigns %>
 
       <%= render @view_module, @view_template, assigns %>
 
       <div class="layout__footer-container">
-        <%= link "About", to: "/", class: "layout__footer-link" %>
+        <%= link "About", to: page_path(@conn, :about_us), class: "layout__footer-link" %>
         <%= link "Feedback", to: "mailto:us@loose-leaf.io", class: "layout__footer-link" %>
       </div>
 

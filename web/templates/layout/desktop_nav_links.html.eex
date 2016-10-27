@@ -1,0 +1,20 @@
+<div class="layout__nav-container-desktop">
+  <div class="layout__nav-left">
+    <%= link("Loose Leaf", to: "/", class: "layout__nav-home-button") %>
+  </div>
+  <div class="layout__nav-right">
+    <div class="layout__nav-right-container">
+      <%= if @current_user do %>
+        <%= link "New Entry", to: entry_path(@conn, :new),
+        class: active_link_class(@conn, Looseleaf.EntryView) %>
+        <%= link "Mood Map", to: analysis_path(@conn, :index),
+        class: active_link_class(@conn, Looseleaf.AnalysisView) %>
+        <%= link "Logout", to: session_path(@conn, :delete, :delete),
+        method: :delete, class: "layout__nav-button" %>
+      <% else %>
+        <%= link "Log in", to: session_path(@conn, :new), class: "layout__nav-button" %>
+        <%= link "Sign up", to: user_path(@conn, :new), class: "layout__nav-button" %>
+      <% end %>
+    </div>
+  </div>
+</div>

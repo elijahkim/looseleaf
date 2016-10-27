@@ -1,0 +1,79 @@
+.about__main-container {
+  display: block;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: $base-spacing * 1.5;
+  overflow-y: scroll;
+
+  @include desktop {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.about__header {
+  @extend %primary-typeface;
+  font-size: 1.1em;
+  align-self: center;
+  margin: $base-spacing auto;
+  text-align: center;
+
+  color: white;
+  width: 90%;
+
+  @include tablet {
+    width: 80%;
+  }
+
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.about__people-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: $base-spacing 0;
+
+  @include tablet {
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    flex-flow: row;
+  }
+}
+
+.about__person-container {
+  @extend %primary-typeface;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: $base-spacing * 2;
+  text-align: center;
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
+}
+
+.about__person-header {
+  color: white;
+  font-size: 1.1em;
+  margin: $small-spacing;
+}
+
+.about__person-image {
+  width: 9em;
+  border-radius: 9em;
+}
+
+.about__person-copy {
+  color: white;
+  font-size: 1em;
+}

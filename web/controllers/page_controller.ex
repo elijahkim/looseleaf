@@ -11,4 +11,9 @@ defmodule Looseleaf.PageController do
       _ -> redirect(conn, to: entry_path(conn, :new))
     end
   end
+
+  def about_us(conn, _params, current_user, _claims) do
+    render(conn, "about.html", layout: {Looseleaf.LayoutView, "app.html"},
+    current_user: current_user)
+  end
 end
