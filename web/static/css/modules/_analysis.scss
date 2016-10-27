@@ -19,7 +19,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 50%;
+  width: 90%;
+
+  @include tablet {
+    max-width: 30em;
+  }
+
+  @include desktop {
+    max-width: 30em;
+  }
 }
 
 .analysis__header {
@@ -27,7 +35,7 @@
 
   color: white;
   text-align: center;
-  margin-bottom: $base-spacing;
+  margin-bottom: $small-spacing;
 }
 
 .analysis__copy {
@@ -42,9 +50,8 @@
 }
 
 .analysis__loose-leaf-man {
-  height: 30%;
   width: 30%;
-  margin-bottom: $base-spacing;
+  margin-bottom: $small-spacing;
 }
 
 .analysis__modal-container {
