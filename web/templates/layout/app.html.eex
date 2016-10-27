@@ -66,6 +66,20 @@
             <% end %>
           </li>
           <li class="layout__off-canvas-list-item">
+            <%= link to: "/", class: "layout__off-canvas-link" do %>
+              <img class="layout__off-canvas-icon"
+                   src=<%= static_path(@conn, "/images/hamburger_question_mark_icon.svg") %>>
+              About
+            <% end %>
+          </li>
+          <li class="layout__off-canvas-list-item">
+            <%= link to: "mailto:us@loose-leaf.io", class: "layout__off-canvas-link" do %>
+              <img class="layout__off-canvas-icon"
+                   src=<%= static_path(@conn, "/images/hamburger_feedback_icon.svg") %>>
+              Feedback
+            <% end %>
+          </li>
+          <li class="layout__off-canvas-list-item">
             <%= link to: session_path(@conn, :delete, :delete), method: :delete, class: "layout__off-canvas-link" do %>
               <img class="layout__off-canvas-icon"
                    src=<%= static_path(@conn, "/images/hamburger_logout_icon.svg") %>>
@@ -76,6 +90,11 @@
       </div>
 
       <%= render @view_module, @view_template, assigns %>
+
+      <div class="layout__footer-container">
+        <%= link "About", to: "/", class: "layout__footer-link" %>
+        <%= link "Feedback", to: "mailto:us@loose-leaf.io", class: "layout__footer-link" %>
+      </div>
 
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
