@@ -28,6 +28,8 @@
   left: 0;
   transform: translateY(100%);
   width: 100%;
+  padding: $base-spacing;
+  box-sizing: border-box
 }
 
 .home__block-header {
@@ -111,5 +113,16 @@
 
   @include desktop {
     font-size: 1em;
+  }
+}
+
+.home__about-us-link {
+  @extend %primary-typeface;
+  color: black;
+  font-size: 1.2em;
+  margin: $base-spacing;
+
+  &:visited {
+    color: black;
   }
 }

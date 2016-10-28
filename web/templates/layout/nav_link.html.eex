@@ -44,13 +44,6 @@
     </li>
   <% end %>
     <li class="layout__off-canvas-list-item">
-      <%= link to: page_path(@conn, :about_us), class: "layout__off-canvas-link" do %>
-        <img class="layout__off-canvas-icon"
-             src=<%= static_path(@conn, "/images/hamburger_question_mark_icon.svg") %>>
-        About
-      <% end %>
-    </li>
-    <li class="layout__off-canvas-list-item">
       <%= link to: "mailto:us@loose-leaf.io", class: "layout__off-canvas-link" do %>
         <img class="layout__off-canvas-icon"
              src=<%= static_path(@conn, "/images/hamburger_feedback_icon.svg") %>>

@@ -44,4 +44,8 @@
       </div>
     </div>
   </div>
+  <div class=home__block-final>
+    <%= link("About Us", to: page_path(@conn, :about_us),
+    class: "home__about-us-link") %>
+  </div>
 </div>
