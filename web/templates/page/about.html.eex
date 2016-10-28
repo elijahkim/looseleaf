@@ -1,0 +1,27 @@
+<div class=about__main-container>
+  <p class=about__header>Loose Leaf is a collaborative project built by a team
+  interested in improving our relationships with ourselves.</p>
+
+  <div class=about__people-container>
+    <div class=about__person-container>
+      <img src=https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png class=about__person-image>
+      <h1 class=about__person-header>Eli</h1>
+      <p class=about__person-copy>Maker, knows less than Jon Snow.</p>
+    </div>
+    <div class=about__person-container>
+      <img src=https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png class=about__person-image>
+      <h1 class=about__person-header>Eli</h1>
+      <p class=about__person-copy>Maker, knows less than Jon Snow.</p>
+    </div>
+    <div class=about__person-container>
+      <img src=https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png class=about__person-image>
+      <h1 class=about__person-header>Eli</h1>
+      <p class=about__person-copy>Maker, knows less than Jon Snow.</p>
+    </div>
+    <div class=about__person-container>
+      <img src=https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png class=about__person-image>
+      <h1 class=about__person-header>Eli</h1>
+      <p class=about__person-copy>Maker, knows less than Jon Snow.</p>
+    </div>
+  </div>
+</div>
