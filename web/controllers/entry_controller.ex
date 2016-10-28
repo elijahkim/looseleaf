@@ -17,7 +17,7 @@ defmodule Looseleaf.EntryController do
       {:error, changeset} ->
         conn
         |> put_flash(:error, "Failed to journal")
-        |> render("new.html", changeset: changeset)
+        |> render("new.html", changeset: changeset, current_user: current_user)
     end
   end
 
