@@ -121,8 +121,31 @@
   color: black;
   font-size: 1.2em;
   margin: $base-spacing;
+  text-decoration: none;
 
   &:visited {
     color: black;
+  }
+}
+
+.home__arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1em;
+
+  transform: rotate(90deg) translateX(-30%) translateY(25%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: rotate(90deg) translateX(-30%) translateY(25%);
+  }
+  40% {
+    transform: rotate(90deg) translateX(-60%) translateY(25%);
+  }
+  60% {
+    transform: rotate(90deg) translateX(-50%) translateY(25%);
   }
 }

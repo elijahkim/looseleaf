@@ -9,7 +9,11 @@
   <%= link("Sign Up", to: "/users/new", class: "home__button") %>
 </div>
 
-<div class=home__extended>
+<a href=#more-info>
+  <img src=<%= static_path(@conn, "/images/next_arrow.svg") %> class="home__arrow">
+</a>
+
+<div id=more-info class=home__extended>
   <div class=home__block1>
     <h1 class=home__block-header>How it works</h1>
     <div class=home__block1-info-container>
@@ -37,10 +41,8 @@
         <h1 class=home__block1-header>
           3. A More Conscious You
         </h1>
-        <p class=home__block1-copy>
-        View insights into the context and trends of your emotions over time.
-        The more you write, the stronger the analysis.
-        </p>
+        <p class=home__block1-copy>View insights about your mood trends over
+        time. The more you write, the stronger the analysis.</p>
       </div>
     </div>
   </div>
