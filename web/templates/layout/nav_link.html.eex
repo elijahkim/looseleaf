@@ -29,14 +29,14 @@
     </li>
   <% else %>
     <li class="layout__off-canvas-list-item">
-      <%= link to: page_path(@conn, :about_us), class: "layout__off-canvas-link" do %>
+      <%= link to: session_path(@conn, :new), class: "layout__off-canvas-link" do %>
         <img class="layout__off-canvas-icon"
              src=<%= static_path(@conn, "/images/hamburger_login_icon.svg") %>>
         Log in
       <% end %>
     </li>
     <li class="layout__off-canvas-list-item">
-      <%= link to: page_path(@conn, :about_us), class: "layout__off-canvas-link" do %>
+      <%= link to: user_path(@conn, :new), class: "layout__off-canvas-link" do %>
         <img class="layout__off-canvas-icon"
              src=<%= static_path(@conn, "/images/hamburger_sign_up_icon.svg") %>>
         Sign up

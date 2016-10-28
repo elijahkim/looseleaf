@@ -15,9 +15,10 @@
 
 .about__header {
   @extend %primary-typeface;
-  font-size: 1.3em;
+  font-size: 1.4em;
   text-align: center;
   color: white;
+  margin-bottom: $base-spacing * 2;
 }
 
 .about__inner-container {
