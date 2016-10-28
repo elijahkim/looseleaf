@@ -3,7 +3,6 @@
   flex: 1;
   flex-direction: column;
   align-items: center;
-  padding: $base-spacing * 1.5;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   height: 100%;
@@ -19,7 +18,7 @@
   font-size: 1.4em;
   text-align: center;
   color: white;
-  margin-bottom: $base-spacing * 2;
+  margin: $base-spacing * 1;
 }
 
 .about__inner-container {
