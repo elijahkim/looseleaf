@@ -1,12 +1,13 @@
 defmodule Looseleaf.TutorialController do
   use Looseleaf.Web, :controller
+  use Guardian.Phoenix.Controller
 
-  def show(conn, %{"id" => id}) do
+  def show(conn, %{"id" => id}, current_user, _claims) do
     id = String.to_integer(id)
 
     case get_assets(id) do
-      false -> redirect(conn, to: entry_path(conn, :new))
-      assets -> render(conn, "show.html", assets: assets, id: id)
+      false -> redirect(conn, to: entry_path(conn, :new), current_user: current_user)
+      assets -> render(conn, "show.html", assets: assets, id: id, current_user: current_user)
     end
   end
 
