@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <%= render("meta_tags.html", assigns) %>
+
     <title>Looseleaf</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <script>

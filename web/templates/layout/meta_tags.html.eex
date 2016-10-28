@@ -1,0 +1,4 @@
+<meta property="og:title" content="Loose Leaf" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.loose-leaf.io" />
+<meta property="og:image" content="<%= static_url(@conn, "/images/preview.png") %>" />
