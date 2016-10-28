@@ -4,24 +4,33 @@
 
   <div class=about__people-container>
     <div class=about__person-container>
-      <img src=https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png class=about__person-image>
+      <img src=<%= static_path(@conn, "/images/eli.jpg") %> class=about__person-image>
       <h1 class=about__person-header>Eli</h1>
       <p class=about__person-copy>Maker, knows less than Jon Snow.</p>
+      <div class=about__person-social>
+        <%= social_link_to(@conn, :github, "https://github.com/elijahkim/") %>
+        <%= social_link_to(@conn, :twitter, "https://twitter.com/monkeypatchr") %>
+        <%= social_link_to(@conn, :email, "mailto:eli@loose-leaf.io") %>
+      </div>
     </div>
     <div class=about__person-container>
-      <img src=https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png class=about__person-image>
-      <h1 class=about__person-header>Eli</h1>
-      <p class=about__person-copy>Maker, knows less than Jon Snow.</p>
+      <img src=<%= static_path(@conn, "/images/elise.jpg") %> class=about__person-image>
+      <h1 class=about__person-header>Elise</h1>
+      <p class=about__person-copy>Product Manager, runs on cold brew.</p>
+      <div class=about__person-social>
+        <%= social_link_to(@conn, :linked_in, "https://www.linkedin.com/in/elisecolbert") %>
+        <%= social_link_to(@conn, :email, "mailto:elisecolbert@loose-leaf.io") %>
+      </div>
     </div>
     <div class=about__person-container>
-      <img src=https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png class=about__person-image>
-      <h1 class=about__person-header>Eli</h1>
-      <p class=about__person-copy>Maker, knows less than Jon Snow.</p>
-    </div>
-    <div class=about__person-container>
-      <img src=https://placeholdit.imgix.net/~text?txtsize=28&bg=0099ff&txtclr=ffffff&txt=300%C3%97300&w=300&h=300&fm=png class=about__person-image>
-      <h1 class=about__person-header>Eli</h1>
-      <p class=about__person-copy>Maker, knows less than Jon Snow.</p>
+      <img src=<%= static_path(@conn, "/images/sherry.png") %> class=about__person-image>
+      <h1 class=about__person-header>Sherry</h1>
+      <p class=about__person-copy>Light packer, doodler, dreamer</p>
+      <div class=about__person-social>
+        <%= social_link_to(@conn, :instagram, "https://www.instagram.com/sherry33/") %>
+        <%= social_link_to(@conn, :linked_in, "https://www.linkedin.com/in/sqwang03") %>
+        <%= social_link_to(@conn, :email, "mailto:sherry@loose-leaf.io") %>
+      </div>
     </div>
   </div>
 </div>

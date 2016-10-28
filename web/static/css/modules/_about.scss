@@ -5,6 +5,7 @@
   align-items: center;
   padding: $base-spacing * 1.5;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   @include desktop {
     display: flex;
@@ -76,4 +77,13 @@
 .about__person-copy {
   color: white;
   font-size: 1em;
+}
+
+.about__person-social {
+  margin: $small-spacing;
+}
+
+.about__person-social-link-icon {
+  width: 2em;
+  height: 2em;
 }
