@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <%= render("favicons.html", assigns) %>
     <%= render("meta_tags.html", assigns) %>
 
     <title>Looseleaf</title>
