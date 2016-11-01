@@ -14,17 +14,17 @@
 
   @include desktop {
     max-width: 30em;
-    padding: $base-spacing * 10;
+    padding: 0 $base-spacing * 10;
   }
 }
 
 .tutorial__image-container {
   width: 60%;
-  padding-bottom: 1em;
+  padding-bottom: $small-spacing;
 
   @include desktop {
     width: 40%;
-    padding-bottom: 36px;
+    padding-bottom: $base-spacing;
   }
 }
 
@@ -33,11 +33,11 @@
 
   color: white;
   font-size: 1.3em;
-  padding-bottom: 1em;
+  padding-bottom: $small-spacing;
 
   @include desktop {
     font-size: 1.5em;
-    padding-bottom: 36px;
+    padding-bottom: $base-spacing;
   }
 }
 
@@ -46,14 +46,16 @@
 
   color: white;
   font-size: 1em;
-  padding: 0 1em $base-spacing * 3 1.5em;
+  padding: $small-spacing;
   width: 70%;
 
   @include tablet {
     width: 75%;
+    padding: $small-spacing;
   }
   @include desktop {
     width: 100%;
+    padding-bottom: $base-spacing * 2;
   }
 }
 
@@ -84,7 +86,11 @@
   display: flex;
   flex-flow: row;
   align-self: center;
-  padding-bottom: $base-spacing * 3;
+  padding-bottom: $small-spacing;
+
+  @include desktop {
+    padding-bottom: $base-spacing * 2;
+  }
 }
 
 .tutorial__chicklet {
