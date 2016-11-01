@@ -4,7 +4,8 @@
     class="analysis__loose-leaf-man">
     <h1 class="analysis__header">Not quite there yet...</h1>
     <p class="analysis__copy">
-    We'll need some more entries from you to gather any meaningful insights and trends.
+    We need <%= remaining_entries(@entries) %> before we can show any meaningful
+    insights and trends
     <p>
   </div>
 </div>

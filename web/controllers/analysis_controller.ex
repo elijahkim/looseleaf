@@ -20,7 +20,7 @@ defmodule Looseleaf.AnalysisController do
     render(conn, "index.html", current_user: current_user, entries: entries)
   end
 
-  defp render_analysis(conn, current_user, _) do
-    render(conn, "not_yet.html", current_user: current_user)
+  defp render_analysis(conn, current_user, entries) do
+    render(conn, "not_yet.html", current_user: current_user, entries: entries)
   end
 end
