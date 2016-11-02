@@ -41,7 +41,7 @@
 
       <div class="layout__footer-container">
         <%= link "About", to: page_path(@conn, :about_us), class: "layout__footer-link" %>
-        <%= link "Feedback", to: "mailto:us@loose-leaf.io", class: "layout__footer-link" %>
+        <%= link "Feedback", to: "https://goo.gl/forms/6JxZCVhueJRUw4fB3", class: "layout__footer-link" %>
       </div>
 
     </div> <!-- /container -->
