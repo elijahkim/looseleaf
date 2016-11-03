@@ -38,7 +38,7 @@ $base-border: 2px solid $opacity-white50;
   }
 
   color: white;
-  font-size: 1.3em;
+  font-size: $small-header-font-size;
   text-decoration: none;
   border: 0;
   border-bottom: $base-border;
