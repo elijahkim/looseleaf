@@ -1,5 +1,5 @@
-<div class=home-layout__copy-container>
-  <p class=home-layout__copy-text>
+<div class=home__copy-container>
+  <p class=home__copy-text>
   The journaling app that promotes self reflection by identifying
   contextual insights and mood trends from self-clearing entries
   </p>

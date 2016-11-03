@@ -46,16 +46,14 @@
 
   color: white;
   font-size: 1em;
-  padding: $small-spacing;
+  padding-bottom: $medium-spacing;
   width: 70%;
 
   @include tablet {
     width: 75%;
-    padding: $small-spacing;
   }
   @include desktop {
     width: 100%;
-    padding-bottom: $base-spacing * 2;
   }
 }
 
@@ -86,11 +84,7 @@
   display: flex;
   flex-flow: row;
   align-self: center;
-  padding-bottom: $small-spacing;
-
-  @include desktop {
-    padding-bottom: $base-spacing * 2;
-  }
+  padding-bottom: $medium-spacing;
 }
 
 .tutorial__chicklet {
@@ -109,7 +103,7 @@
 }
 
 .tutorial__chicklet__active {
-  background-color: white;
+  background-color: $white;
 }
 
 .tutorial__skip-button {

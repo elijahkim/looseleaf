@@ -9,16 +9,16 @@
 .home__button {
   @extend %base-button;
 
-  color: white;
+  color: $white;
   margin: 0 $base-spacing;
-  font-size: 1em;
+  font-size: $small-header-font-size;
 
   @include tablet {
-    font-size: 1.2em;
+    font-size: $desktop-small-header-font-size;
   }
 
   @include desktop {
-    font-size: 1.5em;
+    font-size: $desktop-small-header-font-size;
   }
 }
 
@@ -90,36 +90,36 @@
 .home__block1-header {
   @extend %primary-typeface;
 
-  font-size: 1.2em;
+  font-size: $small-header-font-size;
   margin-bottom: $small-spacing;
 
   @include tablet {
-    font-size: 1.4em;
+    font-size: $desktop-small-header-font-size;
   }
 
   @include desktop {
-    font-size: 1.4em;
+    font-size: $desktop-small-header-font-size;
   }
 }
 
 .home__block1-copy {
   @extend %primary-typeface;
 
-  font-size: .9em;
+  font-size: $base-font-size;
 
   @include tablet {
-    font-size: 1em;
+    font-size: $desktop-font-size;
   }
 
   @include desktop {
-    font-size: 1em;
+    font-size: $desktop-font-size;
   }
 }
 
 .home__about-us-link {
   @extend %primary-typeface;
   color: black;
-  font-size: 1.2em;
+  font-size: $small-header-font-size;
   margin: $base-spacing;
   text-decoration: none;
 
@@ -147,5 +147,24 @@
   }
   60% {
     transform: translateX(-50%) translateY(30%) rotate(90deg);
+  }
+}
+
+.home__copy-container {
+  margin-bottom: $base-spacing;
+}
+
+.home__copy-text {
+  @extend %primary-typeface;
+
+  color: $white;
+  margin-top: $base-spacing;
+  padding: $base-spacing;
+  font-size: 1em;
+  letter-spacing: .05em;
+
+  @include desktop {
+    letter-spacing: .2em;
+    font-size: 1.2em;
   }
 }

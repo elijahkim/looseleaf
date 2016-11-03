@@ -3,7 +3,7 @@
   flex: 1;
 
   @include desktop {
-    padding: $base-spacing * 2;
+    padding: $medium-spacing;
   }
 }
 
@@ -27,14 +27,14 @@
   @extend %primary-typeface;
 
   color: white;
-  font-size: 1.1em;
+  font-size: $small-header-font-size;
 
   @include tablet {
-    font-size: 1.2em;
+    font-size: $desktop-small-header-font-size;
   }
 
   @include desktop {
-    font-size: 1.2em;
+    font-size: $desktop-small-header-font-size;
   }
 }
 
@@ -57,23 +57,23 @@
 
   @include tablet {
     padding: $base-spacing;
-    font-size: 1.2em;
+    font-size: $small-header-font-size;
   }
 
   @include desktop {
     padding: $base-spacing;
-    font-size: 1.2em;
+    font-size: $small-header-font-size;
   }
 }
 
 .new-entry__submit-button {
   @extend %base-button;
 
-  font-size: 1em;
+  font-size: $small-header-font-size;
   margin: $base-spacing;
   align-self: flex-end;
 
   @include tablet {
-    font-size: 1.2em;
+    font-size: $desktop-small-header-font-size;
   }
 }
