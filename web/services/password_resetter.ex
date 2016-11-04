@@ -1,11 +1,14 @@
 defmodule Looseleaf.PasswordResetter do
-  alias Looseleaf.User
+  alias Looseleaf.{Email, Mailer, User}
 
   def reset_password(user, repo) do
     token = random_string(10)
 
-    user
-    |> add_reset_token(token, repo)
+    with {:ok, user} <- add_reset_token(user, token, repo),
+         email       <- Email.password_reset_email(user),
+         email_struct<- Mailer.deliver_later(email) do
+      {:ok, user, email_struct}
+    end
   end
 
   defp add_reset_token(user, token, repo) do
