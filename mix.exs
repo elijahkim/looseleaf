@@ -31,6 +31,7 @@ defmodule Looseleaf.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+     {:bamboo, "~> 0.7"},
      {:comeonin, "~> 2.5"},
      {:cowboy, "~> 1.0"},
      {:gettext, "~> 0.11"},

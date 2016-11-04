@@ -39,3 +39,6 @@ config :looseleaf, Looseleaf.Repo,
   database: "looseleaf_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :looseleaf, Looseleaf.Mailer,
+  adapter: Bamboo.LocalAdapter
