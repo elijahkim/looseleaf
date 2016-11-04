@@ -6,6 +6,7 @@ defmodule Looseleaf.User do
     field :encrypted_password, :string
     field :password, :string, virtual: true
     field :password_confirmation, :string, virtual: true
+    field :password_reset_token
 
     timestamps()
   end
@@ -21,5 +22,10 @@ defmodule Looseleaf.User do
     |> validate_format(:email, ~r/@/)
     |> validate_confirmation(:password)
     |> validate_length(:password, min: 5)
+  end
+
+  def password_reset_token_changeset(struct, params) do
+    struct
+    |> cast(params, [:password_reset_token])
   end
 end
