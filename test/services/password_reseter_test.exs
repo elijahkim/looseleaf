@@ -8,7 +8,7 @@ defmodule Looseleaf.PasswordResetterTest do
     test "it sets a token to edit a password" do
       user = insert(:user)
 
-      {:ok, user, _email} = Looseleaf.PasswordResetter.reset_password(user, Repo)
+      {:ok, user, _email} = Looseleaf.PasswordResetter.reset_password(user.email, Repo)
 
       assert user.password_reset_token != nil
     end
@@ -16,7 +16,7 @@ defmodule Looseleaf.PasswordResetterTest do
     test "it emails the user" do
       user = insert(:user)
 
-      Looseleaf.PasswordResetter.reset_password(user, Repo)
+      Looseleaf.PasswordResetter.reset_password(user.email, Repo)
 
       assert_delivered_email Looseleaf.Email.password_reset_email(user)
     end
