@@ -19,7 +19,7 @@ defmodule Looseleaf.Mixfile do
   def application do
     [mod: {Looseleaf, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin, :httpoison]]
+                    :phoenix_ecto, :postgrex, :comeonin, :httpoison, :bamboo]]
   end
 
   # Specifies which paths to compile per environment.

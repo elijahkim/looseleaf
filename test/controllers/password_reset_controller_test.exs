@@ -27,4 +27,13 @@ defmodule Looseleaf.PasswordResetControllerTest do
       assert user.password_reset_token != nil
     end
   end
+
+  describe "GET /password_reset/:password_reset_token" do
+    test "it redirects to password#new for the user" do
+      user = insert(:user, password_reset_token: "abc")
+      conn = get conn, "/password_reset/#{user.password_reset_token}"
+
+      assert html_response(conn, 302)
+    end
+  end
 end
