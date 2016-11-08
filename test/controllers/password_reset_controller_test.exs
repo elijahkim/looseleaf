@@ -3,6 +3,14 @@ defmodule Looseleaf.PasswordResetControllerTest do
   import Looseleaf.Factory
   alias Looseleaf.{Repo, User}
 
+  describe "GET /password_reset/new" do
+    test "Returns 200", %{conn: conn} do
+      conn = get conn, "/password_reset/new"
+
+      assert html_response(conn, 200)
+    end
+  end
+
   describe "POST /password_reset" do
     test "valid args", %{conn: conn} do
       user = insert(:user)

@@ -2,7 +2,14 @@ defmodule Looseleaf.PasswordResetController do
   use Looseleaf.Web, :controller
   alias Looseleaf.{PasswordResetter, Repo}
 
-  def create(conn, %{"email" => email}) do
+  plug :put_layout, "home.html"
+
+  def new(conn, _params) do
+    conn
+    |> render("new.html")
+  end
+
+  def create(conn, %{"password_reset" => %{"email" => email}}) do
     PasswordResetter.reset_password(email, Repo)
 
     conn

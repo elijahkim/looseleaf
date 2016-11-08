@@ -32,7 +32,7 @@ defmodule Looseleaf.Router do
 
     resources "/users", UserController, only: [:new, :create]
     resources "/sessions", SessionController, only: [:new, :create]
-    resources "/password_reset", PasswordResetController, only: [:create]
+    resources "/password_reset", PasswordResetController, only: [:new, :create]
   end
 
   # Authenticated Routes
