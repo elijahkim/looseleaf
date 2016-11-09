@@ -10,7 +10,7 @@ defmodule Looseleaf.PasswordResetterTest do
 
       {:ok, user, _email} = Looseleaf.PasswordResetter.reset_password(user.email, Repo)
 
-      assert user.password_reset_token != nil
+      refute user.password_reset_token == nil
     end
 
     test "it emails the user" do
