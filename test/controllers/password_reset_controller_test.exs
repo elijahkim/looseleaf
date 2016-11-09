@@ -14,14 +14,14 @@ defmodule Looseleaf.PasswordResetControllerTest do
   describe "POST /password_reset" do
     test "valid args", %{conn: conn} do
       user = insert(:user)
-      conn = post conn, "/password_reset", %{email: user.email}
+      conn = post conn, "/password_reset", %{"password_reset" => %{email: user.email}}
 
       assert html_response(conn, 302)
     end
 
     test "it creates a password reset token for the user", %{conn: conn} do
       user = insert(:user)
-      post conn, "/password_reset", %{email: user.email}
+      post conn, "/password_reset", %{"password_reset" => %{email: user.email}}
 
       user = Repo.get(User, user.id)
       assert user.password_reset_token != nil
