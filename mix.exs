@@ -19,7 +19,7 @@ defmodule Looseleaf.Mixfile do
   def application do
     [mod: {Looseleaf, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin, :httpoison]]
+                    :phoenix_ecto, :postgrex, :comeonin, :httpoison, :bamboo]]
   end
 
   # Specifies which paths to compile per environment.
@@ -31,6 +31,7 @@ defmodule Looseleaf.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+     {:bamboo, "~> 0.7"},
      {:comeonin, "~> 2.5"},
      {:cowboy, "~> 1.0"},
      {:gettext, "~> 0.11"},

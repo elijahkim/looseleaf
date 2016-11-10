@@ -33,6 +33,10 @@ config :guardian, Guardian,
   secret_key: secret_key_base,
   serializer: Looseleaf.GuardianSerializer
 
+config :looseleaf, Looseleaf.Mailer,
+  adapter: Bamboo.MailgunAdapter,
+  api_key: "my_api_key"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

@@ -1,0 +1,11 @@
+<div class=password-reset__main-container>
+  <p class=password-reset__header>Find your account</p>
+
+  <%= form_for @conn, password_reset_path(@conn, :create),
+  [as: :password_reset, class: "password-reset__form"], fn f -> %>
+
+    <%= text_input f, :email, placeholder: "Email" %>
+
+    <%= submit "Submit", class: "password-reset__submit-button" %>
+  <% end %>
+</div>
